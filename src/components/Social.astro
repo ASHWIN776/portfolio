@@ -1,0 +1,40 @@
+---
+import Github from "./icons/Github.astro";
+import Twitter from "./icons/Twitter.astro";
+import Linkedin from "./icons/Linkedin.astro";
+import Mail from "./icons/Mail.astro";
+
+const links = [
+  {
+    name: "github",
+    url: "https://www.github.com/ASHWIN776",
+    icon: Github
+  },
+  {
+    name: "twitter",
+    url: "https://x.com/Ashwin1Anil",
+    icon: Twitter
+  },
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/ashwin-anil-097161190/",
+    icon: Linkedin
+  },
+  {
+    name: "mail",
+    url: "mailto:anilashwin2001@gmail.com",
+    icon: Mail
+  }
+]
+---
+
+<div class="flex gap-x-4">
+  {
+    links.map(link => (
+      <a href={link.url} target="_blank" class="link flex items-center gap-x-1">
+        <link.icon/>
+        <span>{link.name}</span>
+      </a>
+    ))
+  }
+</div>
