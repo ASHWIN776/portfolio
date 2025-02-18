@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root{
+  --dark-bgColor: #000000;
+  --dark-fgColor: #ffffff;
+}
+
+body {
+  background-color: var(--dark-bgColor);
+  color: var(--dark-fgColor);
+  font-family: 'Inter', sans-serif;
+}
+
+.link{
+  @apply border-b-2 border-gray-600 transition-[border-color] hover:border-gray-300;
+}
