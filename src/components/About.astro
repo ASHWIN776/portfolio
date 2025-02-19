@@ -1,21 +1,20 @@
 ---
+import SectionLayout from "../layouts/SectionLayout.astro"
 import Social from "./Social.astro"
 ---
 
-<div class="flex flex-col gap-y-4">
-  <h2 class="text-4xl">About</h2>
-  <div class="flex flex-col gap-y-3">
-    <p>
-      Hello, I'm Ashwin. <br>
-      Filling the void by building things on the internet.
-    </p>
+<SectionLayout title="About">
+  <p>
+    Hello, I'm Ashwin. <br>
+    Filling the void by building things on the internet.
+  </p>
 
-    <p>
-      Currently working as a Software Engineer @<a href="https://www.linkedin.com/company/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%96%E3%83%AC%E3%82%A4%E3%83%96%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/" target="_blank" class="link">bravestudio Inc.</a>
-    </p>
+  <p>
+    Currently working as a Software Engineer @ <a href="https://www.linkedin.com/company/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%96%E3%83%AC%E3%82%A4%E3%83%96%E3%82%B9%E3%82%BF%E3%82%B8%E3%82%AA/" target="_blank" class="link">bravestudio Inc.</a>
+  </p>
 
-    <p>When weekdays make me more typical, <br>
-      I use weekends to embrace and fuel my distinctiveness.</p>
-  </div>
+  <p>When weekdays make me more typical, <br>
+    I use weekends to embrace and fuel my distinctiveness.</p>
   <Social/>
-</div>
+</SectionLayout>
+
