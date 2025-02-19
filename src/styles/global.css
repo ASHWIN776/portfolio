@@ -1,16 +1,26 @@
 @import "tailwindcss";
 
-:root{
-  --dark-bgColor: #000000;
-  --dark-fgColor: #ffffff;
+@theme{
+  --color-background: #000000;
+  --color-primary: #ffffffeb;
+  --color-secondary: #3c83f6;
+  
+  --font-sans: 'Inter', sans-serif;
 }
 
 body {
-  background-color: var(--dark-bgColor);
-  color: var(--dark-fgColor);
-  font-family: 'Inter', sans-serif;
+  @apply text-primary bg-background
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-white
 }
 
 .link{
   @apply border-b-2 border-gray-600 transition-[border-color] hover:border-gray-300;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter-Regular.woff") format("woff")
 }
