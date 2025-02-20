@@ -1,0 +1,33 @@
+---
+import ResourceLink from "./ResourceLink.astro";
+
+const { project } = Astro.props;
+---
+
+<div class="">
+  <div class="flex justify-between items-center">
+    <h2 class="text-xl text-white mb-2">{project.name}</h2>
+    {
+      project.links.map(link => (
+        <ResourceLink link={link.url}>
+          <link.icon />
+        </ResourceLink>
+      ))
+    }
+  </div>
+  <p class="text-gray-400 text-sm">{project.date}</p>
+  
+  <div class="flex flex-wrap gap-2 mt-3">
+    {project.skills.map(skill => (
+      <span class="text-background bg-primary px-3 py-1 text-xs rounded-md font-bold">{skill}</span>
+    ))}
+  </div>
+
+  <p class="mt-4">{project.oneLiner}</p>
+
+  <p class="mt-4">{project.description}</p>
+
+  <div class="mt-4">
+    <img src={project.image} alt={project.name} class="rounded-lg shadow-lg" />
+  </div>
+</div>
