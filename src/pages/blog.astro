@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import BlogCard from "../components/BlogCard.astro";
+
+const pageTitle = "Blog";
+const blogs = [
+  {
+    title: "How to build a blog with Astro",
+    date: "10 Oct 2021",
+    oneLiner: "A step-by-step guide to building a blog with Astro."
+  },
+  {
+    title: "How to build a blog with Astro",
+    date: "10 Oct 2021",
+    oneLiner: "A step-by-step guide to building a blog with Astro."
+  },
+  {
+    title: "How to build a blog with Astro",
+    date: "10 Oct 2021",
+    oneLiner: "A step-by-step guide to building a blog with Astro."
+  },
+]
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <SectionLayout title={pageTitle}>
+    {
+      blogs.map((blog) => (
+        <BlogCard blog={blog} />
+      ))
+    }
+  </SectionLayout>
+</BaseLayout>
