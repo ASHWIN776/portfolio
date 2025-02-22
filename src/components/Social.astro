@@ -1,24 +1,30 @@
 ---
+import Github from "./icons/Github.astro"
+import Linkedin from "./icons/Linkedin.astro"
+import Mail from "./icons/Mail.astro"
+import Twitter from "./icons/Twitter.astro"
+import ResourceLink from "./ResourceLink.astro"
+
 const links = [
   {
-    name: "resume",
-    url: "https://drive.google.com/file/d/1RrGpYs-FxxqcsasbdB9fn03Hb6gcWRHt/view?usp=sharing",
-  },
-  {
     name: "github",
-    url: "https://www.github.com/ASHWIN776"
+    url: "https://www.github.com/ASHWIN776",
+    icon: Github
   },
   {
     name: "twitter",
-    url: "https://x.com/Ashwin1Anil"
+    url: "https://x.com/Ashwin1Anil",
+    icon: Twitter
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/ashwin-anil-097161190/"
+    url: "https://www.linkedin.com/in/ashwin-anil-097161190/",
+    icon: Linkedin
   },
   {
     name: "mail",
-    url: "mailto:anilashwin2001@gmail.com"
+    url: "mailto:anilashwin2001@gmail.com",
+    icon: Mail
   }
 ]
 ---
@@ -26,13 +32,9 @@ const links = [
 <div class="inline-flex gap-x-6 md:justify-center">
   {
     links.map(link => (
-      <a 
-        href={link.url} 
-        target="_blank" 
-        class="secondary-link"
-      >
-        {link.name}
-      </a>
+      <ResourceLink link={link.url}>
+        <link.icon />
+      </ResourceLink>
     ))
   }
 </div>
