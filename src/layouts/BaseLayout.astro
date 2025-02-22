@@ -2,7 +2,7 @@
 import "../styles/global.css"
 import Header from "../components/Header.astro"
 
-const { pageTitle } = Astro.props
+const { pageTitle, tabTitle = pageTitle } = Astro.props
 ---
 <html lang="en">
 	<head>
@@ -10,7 +10,7 @@ const { pageTitle } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
+		<title>{tabTitle}</title>
 	</head>
 	<body>
 		<main class="p-4 min-h-dvh md:max-w-2xl md:mx-auto">
