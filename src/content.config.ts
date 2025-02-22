@@ -1,5 +1,5 @@
 import { defineCollection, z } from "astro:content";
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 
 const blog = defineCollection({
   loader: glob({
@@ -15,4 +15,13 @@ const blog = defineCollection({
   })
 })
 
-export const collections = { blog };
+const socials = defineCollection({
+  loader: file("src/data/socials.json"),
+  schema: z.object({
+    name: z.string(),
+    url: z.string().url(),
+    iconPath: z.string()
+  })
+})
+
+export const collections = { blog, socials };
