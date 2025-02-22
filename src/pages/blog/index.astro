@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import BlogCard from "../../components/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const pageTitle = "Blog";
+const allBlogs = await getCollection("blog");
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <SectionLayout title={pageTitle}>
+    {
+      allBlogs.map((blog) => (
+        <BlogCard blog={{
+          ...blog.data,
+          link: `/blog/${blog.id}`,
+        }} />
+      ))
+    }
+  </SectionLayout>
+</BaseLayout>
