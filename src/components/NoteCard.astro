@@ -1,0 +1,29 @@
+---
+import ResourceLink from "./ResourceLink.astro"
+
+const { note } = Astro.props
+---
+
+<div class="flex flex-col gap-y-6">
+  <div class="flex justify-between items-start">
+    <div class="flex flex-col gap-y-3">
+      <h2 class="text-xl">
+        <a href={note.href} class="link">{note.title}</a>
+      </h2>
+      <div class="flex flex-wrap gap-x-3">
+        {note.tags.map((tag: string) => (
+          <span class="text-background bg-primary px-3 py-1 text-xs rounded-md font-bold">{tag}</span>
+        ))}
+      </div>
+    </div>
+    <ResourceLink link={note.href}>
+      <span class="text-xs font-bold">Notes</span>
+    </ResourceLink>
+  </div>
+
+  <div class="flex flex-col gap-y-2">
+    <p class="text-sm text-gray-300">{note.oneLiner}</p>
+    
+    <p class="text-sm">Thank You - <a href={note.authorLink} class="author-link">{note.author}</a> </p>
+  </div>
+</div>
