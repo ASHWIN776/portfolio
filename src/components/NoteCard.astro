@@ -5,15 +5,15 @@ const { note } = Astro.props
 ---
 
 <div class="flex flex-col gap-y-3">
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-start">
     <div class="flex flex-col gap-y-2">
-      <h2 class="text-xl/4">
-        <a href={note.link} class="link">{note.title}</a>
+      <h2 class="text-xl">
+        <a href={note.href} class="link">{note.title}</a>
       </h2>
-      <p class="text-xs">
-        <span>Found on -</span>
-        <span class="text-gray-400">{note.date}</span>
-      </p>
+      <a 
+        class="text-gray-400 underline text-xs"
+        href={note.authorLink}
+      >{note.author}</a>
     </div>
     <ResourceLink link={note.href}>
       <span class="text-xs font-bold">Notes</span>
