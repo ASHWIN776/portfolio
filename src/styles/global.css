@@ -20,6 +20,14 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-secondary;
 }
 
+.secondary-link{
+  @apply text-gray-400 hover:text-gray-50 transition-[color];
+}
+
+.active-secondary-link{
+  @apply text-primary;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff") format("woff")

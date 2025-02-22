@@ -1,11 +1,25 @@
 ---
+import NavLink from "./NavLink.astro"
+
+const { pageTitle } = Astro.props
+
+const navLinks = [
+  { label: "~", href: "/", pageTitle: "home" },
+  { label: "./blog", href: "/blog", pageTitle: "blog" },
+  { label: "./projects", href: "projects", pageTitle: "projects" },
+  { label: "./notes", href: "notes", pageTitle: "notes" },
+]
 ---
 
 <header class="mb-10">
   <nav class="flex gap-x-6">
-    <a href="/">~</a>
-    <a href="/blog">./blog</a>
-    <a href="/projects">./projects</a>
-    <a href="/notes">./notes</a>
+    {
+      navLinks.map(link => (
+        <NavLink 
+          link={link} 
+          currentPageTitle={pageTitle}
+        />
+      ))
+    }
   </nav>
 </header>
