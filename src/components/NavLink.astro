@@ -3,4 +3,7 @@ const { link, currentPageTitle } = Astro.props
 const isActive = currentPageTitle.toLowerCase() === link.pageTitle
 ---
 
-<a href={link.href} class={`secondary-link ${isActive ? "active-secondary-link" : ""}`}>{link.label}</a>
+<a 
+  href={link.href} 
+  class={`font-mono text-sm secondary-link ${isActive ? "active-secondary-link" : ""}`}
+>{link.label}</a>

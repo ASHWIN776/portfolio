@@ -1,5 +1,6 @@
 ---
 import ResourceLink from "./ResourceLink.astro";
+import Tag from "./Tag.astro";
 
 const { project } = Astro.props;
 ---
@@ -24,7 +25,7 @@ const { project } = Astro.props;
 
   <div class="flex flex-wrap gap-x-2">
     {project.skills.map((skill: string) => (
-      <span class="text-background bg-primary px-3 py-1 text-xs rounded-md font-bold">{skill}</span>
+      <Tag name={skill} />
     ))}
   </div>
 
