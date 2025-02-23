@@ -1,5 +1,6 @@
 ---
 import ResourceLink from "./ResourceLink.astro"
+import Tag from "./Tag.astro"
 
 const { note } = Astro.props
 ---
@@ -12,7 +13,7 @@ const { note } = Astro.props
       </h2>
       <div class="flex flex-wrap gap-x-3">
         {note.tags.map((tag: string) => (
-          <span class="text-background bg-primary px-3 py-1 text-xs rounded-md font-bold">{tag}</span>
+          <Tag name={tag} />
         ))}
       </div>
     </div>
