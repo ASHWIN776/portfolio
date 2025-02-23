@@ -13,7 +13,7 @@ const { note } = Astro.props
       </h2>
       <div class="flex flex-wrap gap-x-3">
         {note.tags.map((tag: string) => (
-          <Tag name={tag} />
+          <Tag name={tag} lowercase/>
         ))}
       </div>
     </div>
