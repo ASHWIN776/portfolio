@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-white
+  @apply text-white font-mono font-bold
 }
 
 .link{
@@ -35,4 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Inter Bold";
+  src: url("/fonts/Inter-Bold.woff") format("woff")
 }
