@@ -1,39 +1,25 @@
 ---
-import Github from "./icons/Github.astro"
-import Linkedin from "./icons/Linkedin.astro"
-import Mail from "./icons/Mail.astro"
-import Twitter from "./icons/Twitter.astro"
+import { getCollection } from "astro:content"
 import ResourceLink from "./ResourceLink.astro"
+import type { AstroInstance } from "astro"
 
-const links = [
-  {
-    name: "github",
-    url: "https://www.github.com/ASHWIN776",
-    icon: Github
-  },
-  {
-    name: "twitter",
-    url: "https://x.com/Ashwin1Anil",
-    icon: Twitter
-  },
-  {
-    name: "linkedin",
-    url: "https://www.linkedin.com/in/ashwin-anil-097161190/",
-    icon: Linkedin
-  },
-  {
-    name: "mail",
-    url: "mailto:anilashwin2001@gmail.com",
-    icon: Mail
-  }
-]
+// Get socials collection
+const socials = await getCollection("socials")
+
+// Import all icons
+const icons = import.meta.glob("/src/components/icons/*.astro", { eager: true }) as Record<string, AstroInstance>
+
+const socialLinks = socials.map(social => ({
+  name: social.data.name,
+  url: social.data.url,
+  icon: icons[social.data.iconPath] 
+}))
 ---
-
-<div class="inline-flex gap-x-6 md:justify-center">
+<div class="inline-flex gap-x-6 justify-center">
   {
-    links.map(link => (
+    socialLinks.map(link => (
       <ResourceLink link={link.url}>
-        <link.icon />
+        {link.icon ? <link.icon.default /> : link.name}
       </ResourceLink>
     ))
   }
