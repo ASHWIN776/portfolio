@@ -1,0 +1,28 @@
+---
+import { marked } from 'marked';
+import Prose from './Prose.astro';
+
+const { experience } = Astro.props
+const markdownDescription = marked.parse(experience.description);
+---
+
+<div class="flex flex-col gap-y-3">
+  <div class="flex flex-col gap-y-1">
+    <span class="text-white text-lg">
+      {experience.title} - 
+      <a 
+        href={experience.companyLink}
+        target="_blank"
+        class="link" 
+      >{experience.company}</a>
+    </span>
+  
+    <span class="text-xs flex gap-x-2 text-gray-400">
+      {experience.startDate} - {experience.endDate ?? "Present"}
+  </div>
+  </span>
+
+  <Prose>
+    <span class="text-sm" set:html={markdownDescription} />
+  </Prose>
+</div>
