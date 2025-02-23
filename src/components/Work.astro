@@ -1,35 +1,15 @@
 ---
+import { getCollection } from "astro:content"
 import SectionLayout from "../layouts/SectionLayout.astro"
-import Exp from "./Exp.astro"
+import WorkCard from "../components/WorkCard.astro"
 
-const experience = [
-  {
-    title: "Software Engineer",
-    company: "bravestudio Inc.",
-    companyLink: "https://bravestudio.co.jp/",
-    startDate: "2023 Nov"
-  },
-  {
-    title: "Software Eng. Intern",
-    company: "bravestudio Inc.",
-    companyLink: "https://bravestudio.co.jp/",
-    startDate: "2023 Jun",
-    endDate: "2023 Nov"
-  },
-  {
-    title: "Software Eng. Intern",
-    company: "TOA",
-    companyLink: "https://www.toasoft.co.jp/",
-    startDate: "2023 Feb",
-    endDate: "2023 Feb"
-  }
-]
+const works = (await getCollection("works")).reverse()
 ---
 
 <SectionLayout title="Work">
   {
-    experience.map(exp => (
-      <Exp experience={exp} />
+    works.map(exp => (
+      <WorkCard experience={exp.data} />
     ))
   }
 </SectionLayout>

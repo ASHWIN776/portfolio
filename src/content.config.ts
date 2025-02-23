@@ -24,4 +24,16 @@ const socials = defineCollection({
   })
 })
 
-export const collections = { blog, socials };
+const works = defineCollection({
+  loader: file("src/data/works.json"),
+  schema: z.object({
+    title: z.string(),
+    company: z.string(),
+    companyLink: z.string().url(),
+    startDate: z.string(),
+    endDate: z.string().optional(),
+    description: z.string()
+  })
+})
+
+export const collections = { blog, socials, works };

@@ -6,8 +6,8 @@ import type { AstroInstance } from "astro"
 // Get socials collection
 const socials = await getCollection("socials")
 
-// Import all icons
-const icons = import.meta.glob("/src/components/icons/*.astro", { eager: true }) as Record<string, AstroInstance>
+// Import all social icons
+const icons = import.meta.glob("/src/components/icons/socials/*.astro", { eager: true }) as Record<string, AstroInstance>
 
 const socialLinks = socials.map(social => ({
   name: social.data.name,

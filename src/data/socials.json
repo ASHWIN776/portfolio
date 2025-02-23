@@ -3,24 +3,24 @@
     "id": 1,
     "name": "github",
     "url": "https://www.github.com/ASHWIN776",
-    "iconPath": "/src/components/icons/Github.astro"
+    "iconPath": "/src/components/icons/socials/Github.astro"
   },
   {
     "id": 2,
     "name": "twitter",
     "url": "https://x.com/Ashwin1Anil",
-    "iconPath": "/src/components/icons/Twitter.astro"
+    "iconPath": "/src/components/icons/socials/Twitter.astro"
   },
   {
     "id": 3,
     "name": "linkedin",
     "url": "https://www.linkedin.com/in/ashwin-anil-097161190/",
-    "iconPath": "/src/components/icons/Linkedin.astro"
+    "iconPath": "/src/components/icons/socials/Linkedin.astro"
   },
   {
     "id": 4,
     "name": "mail",
     "url": "mailto:anilashwin2001@gmail.com",
-    "iconPath": "/src/components/icons/Mail.astro"
+    "iconPath": "/src/components/icons/socials/Mail.astro"
   }
 ]
