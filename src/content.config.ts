@@ -36,4 +36,21 @@ const works = defineCollection({
   })
 })
 
-export const collections = { blog, socials, works };
+const projects = defineCollection({
+  loader: file("src/data/projects.json"),
+  schema: z.object({
+    name: z.string(),
+    date: z.string(),
+    skills: z.array(z.string()),
+    oneLiner: z.string(),
+    description: z.string(),
+    imagePath: z.string(),
+    links: z.object({
+      github: z.string().url().optional(),
+      live: z.string().url().optional(),
+      youtube: z.string().url().optional()
+    })
+  })
+})
+
+export const collections = { blog, socials, works, projects };

@@ -3,67 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionLayout from "../layouts/SectionLayout.astro"
 import ProjectCard from "../components/ProjectCard.astro"
 import Github from "../components/icons/socials/Github.astro"
+import { getCollection } from "astro:content"
 
 const pageTitle = "Projects"
-
-const projects = [
-  {
-    name: "Project Name",
-    link: "#",
-    date: "Nov 2024",
-    skills: ["NextJS", "React"],
-    // A one-liner description of the project
-    oneLiner: "A one-liner description of the project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a tortor eu nisl bibendum vulputate. Nam eu dictum ligula. Maecenas sit amet dui sem. Fusce feugiat augue faucibus tristique suscipit. ",
-    image: "/image.png",
-    additionalLinks: [
-      {
-        name: "GitHub",
-        icon: Github,
-        url: "https://github.com/repo",
-      }
-    ]
-  },
-  {
-    name: "Project Name",
-    link: "#",
-    date: "Nov 2024",
-    skills: ["NextJS", "React"],
-    oneLiner: "A one-liner description of the project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a tortor eu nisl bibendum vulputate. Nam eu dictum ligula. Maecenas sit amet dui sem. Fusce feugiat augue faucibus tristique suscipit. ",
-    image: "/image.png",
-    additionalLinks: [
-      {
-        name: "GitHub",
-        icon: Github,
-        url: "https://github.com/repo",
-      }
-    ]
-  },
-  {
-    name: "Project Name",
-    link: "#",
-    date: "Nov 2024",
-    skills: ["NextJS", "React"],
-    oneLiner: "A one-liner description of the project",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a tortor eu nisl bibendum vulputate. Nam eu dictum ligula. Maecenas sit amet dui sem. Fusce feugiat augue faucibus tristique suscipit. ",
-    image: "/image.png",
-    additionalLinks: [
-      {
-        name: "GitHub",
-        icon: Github,
-        url: "https://github.com/repo",
-      }
-    ]
-  }
-];
+const projects = (await getCollection("projects")).reverse()
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <SectionLayout title="Projects">
     {
       projects.map(project => (
-        <ProjectCard project={project} />
+        <ProjectCard project={project.data} />
       ))
     }
   </SectionLayout>
