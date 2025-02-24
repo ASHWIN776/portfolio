@@ -15,7 +15,7 @@ const socialLinks = socials.map(social => ({
   icon: icons[social.data.iconPath] 
 }))
 ---
-<div class="inline-flex gap-x-6">
+<div class="inline-flex gap-x-6 justify-center md:justify-start">
   {
     socialLinks.map(link => (
       <ResourceLink link={link.url}>
