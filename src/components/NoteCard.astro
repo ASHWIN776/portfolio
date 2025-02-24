@@ -5,26 +5,25 @@ import Tag from "./Tag.astro"
 const { note } = Astro.props
 ---
 
-<div class="flex flex-col gap-y-6">
+<div class="flex flex-col gap-y-3">
   <div class="flex justify-between items-start">
-    <div class="flex flex-col gap-y-3">
+    <div class="flex flex-col gap-y-1">
       <h2 class="text-xl">
-        <a href={note.href} class="link">{note.title}</a>
+        <a href={note.link} class="link">{note.title}</a>
       </h2>
-      <div class="flex flex-wrap gap-x-3">
-        {note.tags.map((tag: string) => (
-          <Tag name={tag} lowercase/>
-        ))}
-      </div>
+      <p class="text-gray-400 text-xs">{note.author}</p>
     </div>
-    <ResourceLink link={note.href}>
-      <span class="text-xs font-bold">Notes</span>
+    <ResourceLink link={note.noteLink}>
+      <span class="text-xs font-bold">Overview</span>
     </ResourceLink>
   </div>
 
-  <div class="flex flex-col gap-y-2">
+  <div class="flex flex-col gap-y-3">
+    <div class="flex flex-wrap gap-2">
+      {note.tags.map((tag: string) => (
+        <Tag name={tag} lowercase/>
+      ))}
+    </div>
     <p class="text-sm text-gray-300">{note.oneLiner}</p>
-    
-    <p class="text-sm">Thank You - <a href={note.authorLink} class="author-link">{note.author}</a> </p>
   </div>
 </div>

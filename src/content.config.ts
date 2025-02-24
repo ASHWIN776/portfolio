@@ -15,6 +15,22 @@ const blog = defineCollection({
   })
 })
 
+const notes = defineCollection({
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/data/notes",
+  }),
+  schema: z.object({
+    title: z.string(),
+    link: z.string().url(),
+    author: z.string(),
+    authorLink: z.string().url(),
+    foundDate: z.date(),
+    oneLiner: z.string(),
+    tags: z.array(z.string())
+  })
+})
+
 const socials = defineCollection({
   loader: file("src/data/socials.json"),
   schema: z.object({
@@ -53,4 +69,10 @@ const projects = defineCollection({
   })
 })
 
-export const collections = { blog, socials, works, projects };
+export const collections = { 
+  blog, 
+  socials, 
+  works, 
+  projects, 
+  notes 
+};
