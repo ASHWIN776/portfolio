@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SectionLayout from "../../layouts/SectionLayout.astro";
+import NoteCard from "../../components/NoteCard.astro";
+
+const pageTitle = "Notes";
+const allNotes = await getCollection("notes");
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <SectionLayout title={pageTitle}>
+    {
+      allNotes.map((note) => (
+        <NoteCard note={{
+          ...note.data,
+          noteLink: `/notes/${note.id}`,
+        }} />
+      ))
+    }
+  </SectionLayout>
+</BaseLayout>
