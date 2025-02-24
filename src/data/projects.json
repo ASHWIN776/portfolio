@@ -8,9 +8,6 @@
     "description": "- **Motivation**: I wanted to solve attendance management during online classes\n- Reduced the attendance taking and managing time by **90%**\n- **Used by IT department of my college**\n- Turned into a team project later, where we added the fingerprint scanner feature and improved the web app\n- Learnt PHP here",
     "imagePath": "/src/assets/projects/mark-p.png",
     "links": {
-      "github": "https://github.com/repo",
-      "live": "https://website.com",
-      "youtube": "https://demo.com"
     }
   },
   {
@@ -23,7 +20,6 @@
     "imagePath": "/src/assets/projects/leadstrata.png",
     "links": {
       "github": "https://github.com/ashwin776/leadstrata",
-      "live": "https://lead-strata.vercel.app/",
       "youtube": "https://demo.com"
     }
   },
@@ -37,8 +33,7 @@
     "imagePath": "/src/assets/projects/payobvio.png",
     "links": {
       "github": "https://github.com/payobv-io/payobv.io",
-      "live": "https://lead-strata.vercel.app/",
-      "youtube": "https://demo.com"
+      "youtube": "https://youtu.be/YPa5TbcTs7k"
     }
   },
   {
@@ -47,11 +42,10 @@
     "date": "Dec 2024",
     "skills": ["NextJS", "Vercel AI SDK", "Supabase", "pgvector"],
     "oneLiner": "Save what catches your eye, recall it anytime",
-    "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Executed **RAG(Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes",
+    "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes",
     "imagePath": "/src/assets/projects/recall.png",
     "links": {
       "github": "https://github.com/ASHWIN776/recall",
-      "live": "https://change-this.app/", 
       "youtube": "https://demo.com"
     }
   }
