@@ -17,11 +17,21 @@ const { frontmatter } = Astro.props;
 
     <div class="flex flex-col bg-reference-box gap-y-2 p-3 rounded-md">
       <p>
-        Checkout the <a href={frontmatter.link} class="link font-bold" target="_blank">Resource</a> here.
+        Checkout the <a 
+        href={frontmatter.link} 
+        class="link font-bold" 
+        target="_blank"
+        rel= "noopener noreferrer"
+      >Resource</a> here.
       </p>
       
       <p>
-        Thankul to <a href={frontmatter.authorLink} class="link font-bold" target="_blank">{frontmatter.author}</a> for putting this out there.
+        Thankul to <a 
+        href={frontmatter.authorLink} 
+        class="link font-bold" 
+        target="_blank"
+        rel= "noopener noreferrer"
+        >{frontmatter.author}</a> for putting this out there.
       </p>
     </div>
 

@@ -22,7 +22,7 @@ if (!images[project.imagePath]) throw new Error(`"${project.imagePath}" does not
         {
           project.links.youtube 
           ? 
-            <a href={project.links.youtube} class="link" target="_blank">{project.name}</a>
+            <a href={project.links.youtube} class="link" target="_blank" rel= "noopener noreferrer">{project.name}</a>
           : 
             project.name
         }

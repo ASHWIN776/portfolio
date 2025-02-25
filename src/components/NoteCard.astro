@@ -13,7 +13,7 @@ const { note } = Astro.props
       </h2>
       <p class="text-gray-400 text-xs">{note.author}</p>
     </div>
-    <ResourceLink link={note.noteLink}>
+    <ResourceLink link={note.noteLink} openNewTab={false}>
       <span class="text-xs font-bold">Overview</span>
     </ResourceLink>
   </div>

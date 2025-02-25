@@ -1,11 +1,13 @@
 ---
-const { link } = Astro.props;
+const { link, openNewTab = true } = Astro.props;
 ---
 
 <a 
   href={link}
-  target="_blank"
   class="inline-flex items-center justify-center transition-colors border border-gray-600 bg-background hover:bg-[#151515] rounded-md cursor-pointer p-2 text-white"
+  {...(
+    openNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {}
+  )}
 >
   <slot />
 </a>
