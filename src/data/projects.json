@@ -19,8 +19,7 @@
     "description": "- **Motivation**: I was teaching basic Web Dev (HTML, CSS, JS) to my juniors and wanted to track their progress\n- Started off as a Community GitHub Progress Tracker, later added the GitHub analysis feature\n- **Currently used in my current company** to analyse profiles of candidates",
     "imagePath": "/src/assets/projects/leadstrata.png",
     "links": {
-      "github": "https://github.com/ashwin776/leadstrata",
-      "youtube": "https://demo.com"
+      "youtube": "https://youtu.be/7_4yAibW27g"
     }
   },
   {
@@ -45,8 +44,7 @@
     "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes",
     "imagePath": "/src/assets/projects/recall.png",
     "links": {
-      "github": "https://github.com/ASHWIN776/recall",
-      "youtube": "https://demo.com"
+      "youtube": "https://youtu.be/IM7XrKOlbWQ"
     }
   }
 ]
