@@ -14,7 +14,7 @@
     "id": 2,
     "name": "leadStrata",
     "date": "Mar 2023",
-    "skills": ["React", "GitHub REST API"],
+    "skills": ["ReactJS", "GitHub REST API"],
     "oneLiner": "GitHub Analysis and Progress Tracking Tool",
     "description": "- **Motivation**: I was teaching basic Web Dev (HTML, CSS, JS) to my juniors and wanted to track their progress\n- Started off as a Community GitHub Progress Tracker, later added the GitHub analysis feature\n- **Currently used in my current company** to analyse profiles of candidates",
     "imagePath": "/src/assets/projects/leadstrata.png",
