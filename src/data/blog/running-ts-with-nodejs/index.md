@@ -7,7 +7,7 @@ tags: ["typescript", "nodejs"]
 
 Node.js doesn't support TypeScript out of the box. 
 
-That doesn't mean you can't run TypeScript with Node.js Just, that you need to do a little extra work.
+That doesn't mean you can't run TypeScript with Node. Just, that you need to do a little extra work.
 
 ![Diagram](./concept-diagram.png)
 

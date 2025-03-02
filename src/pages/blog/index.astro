@@ -10,6 +10,8 @@ const allBlogs = await getCollection("blog");
 
 <BaseLayout pageTitle={pageTitle}>
   <SectionLayout title={pageTitle}>
+    <p class="bg-aside p-3 rounded-md">I want to get good at explaining my thoughts.<br> Writing can get me there.</p>
+
     {
       allBlogs.map((blog) => (
         <BlogCard blog={{
