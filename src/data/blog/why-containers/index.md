@@ -36,9 +36,11 @@ lets start!
 In the early days, every app ran on its own dedicated physical machine.
 
 <aside>
+<strong>Using bare metal for running our apps</strong>
+
 So, according to the above scenario, you would run the frontend app, backend app, and database on 3 different machines.
 
-Now, you would say - why not just everything on the laptop.
+Now, you would say - why not just run everything on the laptop.
 
 But, you wouln't want your backend or frontend app to interfere with the database right?
 
@@ -78,7 +80,9 @@ Who lets you do that? [Hypervisor](https://aws.amazon.com/what-is/hypervisor/)
 The hypervisor is a software that creates and runs virtual machines. It manages the virtual machines' resources and isolates them from each other.
 
 <aside>
-So, now the running of our app becomes:
+<strong>Using VMs for running our apps</strong>
+
+Each app runs on a separate VM. So, running of the apps looks like the below image.
 
 ![Running in VMs](./assets/running-in-vms.png)
 
@@ -111,6 +115,8 @@ Who lets you do that? [Container Engine](https://www.wiz.io/academy/container-en
 The container engine (like [Docker](https://www.docker.com/)) is a software that creates and runs containers. It manages the containers' resources and isolates them from each other.
 
 <aside>
+<strong>Using Containers for running our apps</strong>
+
 Here, instead of recreating an environment for the app to run (which we used to do in the case of VMs), 
 
 we just make the application capable of running on all types of environments.
