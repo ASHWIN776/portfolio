@@ -84,9 +84,21 @@ To run this code, 2 steps are needed:
 2. Run `js` using nodejs
 
 ```bash
-tsc index.ts  
+# This compiles all ts files in your project into js
+npx tsc  
 
-# The above code generates a js file that we can run using nodejs
+# OR
+
+# This compiles all CHANGED ts files in your project into js (takes relatively less time)
+# Avoids unnecessary recompilation of unchanged files.
+npx tsc -b
+```
+
+The above command(whichever you choose to run) will create a new file `index.js` in the same directory.
+
+Now, run the `index.js` file using Node.js
+
+```bash
 node index.js
 ```
 
