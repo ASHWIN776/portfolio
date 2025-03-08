@@ -18,10 +18,10 @@ const markdownDescription = marked.parse(experience.description);
       >{experience.company}</a>
     </span>
   
-    <span class="text-xs flex gap-x-2 text-gray-400">
-      {experience.startDate} - {experience.endDate ?? "Present"}
+    <span class="text-xs text-gray-400">
+      📍 {experience.location} | {experience.startDate} - {experience.endDate ?? "Present"} 
+    </span>
   </div>
-  </span>
 
   <Prose>
     <span class="text-sm" set:html={markdownDescription} />

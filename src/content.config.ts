@@ -45,6 +45,7 @@ const works = defineCollection({
     title: z.string(),
     company: z.string(),
     companyLink: z.string().url(),
+    location: z.string(),
     startDate: z.string(),
     endDate: z.string().optional(),
     description: z.string()

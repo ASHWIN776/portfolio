@@ -1,27 +1,40 @@
 [
   {
     "id": 1,
+    "title": "Cofounder",
+    "company": "mark-P",
+    "companyLink": "https://www.linkedin.com/company/mark-p",
+    "location": "Kerala, India",
+    "startDate": "May 2022",
+    "endDate": "May 2023",
+    "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college (3rd Yr)\n- Failed, and I shut it down because of lack of a USP. Learnt a lot though - never regretted it"
+  },
+  {
+    "id": 2,
     "title": "Software Eng. Intern",
     "company": "TOA",
     "companyLink": "https://www.toasoft.co.jp/",
+    "location": "Yonago, Japan",
     "startDate": "Feb 2023",
     "endDate": "Feb 2023",
     "description": "- Frontend development using **ReactJS**\n- Focus was on finishing as much screens as possible(quantity)"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Software Eng. Intern",
     "company": "bravestudio Inc.",
     "companyLink": "https://bravestudio.co.jp/",
+    "location": "Matsue, Japan",
     "startDate": "Jun 2023",
     "endDate": "Nov 2023",
     "description": "- Frontend development using **ReactJS**\n- Focused on writing **clean and maintainable** code"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Full Stack Software Engineer", 
     "company": "bravestudio Inc.",
     "companyLink": "https://bravestudio.co.jp/",
+    "location": "Matsue, Japan",
     "startDate": "Nov 2023",
     "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped projects using **ReactJS, Rails**\n- Tools used: **Git, Docker, AWS, Figma**"
   }
