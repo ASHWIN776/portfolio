@@ -16,8 +16,6 @@ In short - `Process of making an application available for use.`
 It ensures that the app runs efficiently on a server or device and is accessible to the customer or end-user.
 </aside>
 
-Lets see how to deploy an app. 
-
 Deploying essentially means running an app. So, I'll just talk about running an app in the below content.
 
 Things you have:
