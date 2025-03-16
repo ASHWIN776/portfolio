@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4.1.0
@@ -27,4 +27,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with: 
           apiToken: ${{ secrets.CLOUDFLARE_ACCOUNT_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./dist --project-name=ashwin-anil --branch=production
