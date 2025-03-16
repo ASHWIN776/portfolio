@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4.1.0
+        uses: pnpm/action-setup@v4
         with:
           version: 9.14.2
 
@@ -24,7 +24,7 @@ jobs:
         run: pnpm build
       
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v3.14.1
         with: 
           apiToken: ${{ secrets.CLOUDFLARE_ACCOUNT_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
