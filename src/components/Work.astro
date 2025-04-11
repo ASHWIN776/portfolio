@@ -7,6 +7,7 @@ const works = (await getCollection("works")).reverse()
 ---
 
 <SectionLayout title="Work">
+  <p class="bg-aside p-3 rounded-md">Check out my <a href="https://drive.google.com/file/d/1o4GvxozGCnIWaJVAFbdAxKHB4xqmi-_T/view?usp=sharing" class="link" target="_blank" rel="noopener noreferrer">resume</a></p>
   {
     works.map(exp => (
       <WorkCard experience={exp.data} />
