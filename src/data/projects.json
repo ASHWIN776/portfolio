@@ -14,7 +14,7 @@
     "id": 2,
     "name": "leadStrata",
     "date": "Mar 2023",
-    "skills": ["ReactJS", "GitHub REST API"],
+    "skills": ["ReactJS", "GitHub REST API", "Redux", "Styled Components"],
     "oneLiner": "GitHub Analysis and Progress Tracking Tool",
     "description": "- **Motivation**: I was teaching basic Web Dev (HTML, CSS, JS) to my juniors and wanted to track their progress\n- Started off as a Community GitHub Progress Tracker, later added the GitHub analysis feature\n- **Currently used in my current company** to analyse profiles of candidates",
     "imagePath": "/src/assets/projects/leadstrata.png",
@@ -26,7 +26,7 @@
     "id": 3,
     "name": "payobvio",
     "date": "Aug 2024",
-    "skills": ["NextJS", "Github App", "Octokit.js", "Prisma", "postgreSQL"],
+    "skills": ["NextJS", "TypeScript", "Github App", "Octokit.js", "Prisma", "postgreSQL", "Tailwind CSS"],
     "oneLiner": "Bridging OS Incentives, Payments, and Proof of Skill",
     "description": "- **Motivation**: Colosseum hackathon\n- **Web 3 Bounty System** for Open Source Projects\n - Included **Escrow**\n- Proof of skill for contributors\n- Learnt NextJS here",
     "imagePath": "/src/assets/projects/payobvio.png",
@@ -37,9 +37,22 @@
   },
   {
     "id": 4,
+    "name": "portfolio",
+    "date": "Jan 2025",
+    "skills": ["Astro", "TypeScript", "Tailwind CSS"],
+    "oneLiner": "Introducing myself to the world",
+    "description": "- **Motivation**: Wanted to showcase my work, and write blogs\n- Learnt Astro here",
+    "imagePath": "/src/assets/projects/portfolio.png",
+    "links": {
+      "github": "https://github.com/ashwin776/portfolio",
+      "live": "https://ashwin-anil.pages.dev"
+    }
+  },
+  {
+    "id": 5,
     "name": "recall",
     "date": "Dec 2024",
-    "skills": ["NextJS", "Vercel AI SDK", "Supabase", "pgvector"],
+    "skills": ["NextJS", "TypeScript", "Vercel AI SDK", "Supabase", "pgvector", "Tailwind CSS"],
     "oneLiner": "Save what catches your eye, recall it anytime",
     "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes",
     "imagePath": "/src/assets/projects/recall.png",

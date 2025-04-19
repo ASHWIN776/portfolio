@@ -20,9 +20,9 @@ if (!images[project.imagePath]) throw new Error(`"${project.imagePath}" does not
     <div class="flex flex-col gap-y-1">
       <h2 class="text-xl">
         {
-          project.links.youtube 
+          project.links.youtube || project.links.live
           ? 
-            <a href={project.links.youtube} class="link" target="_blank" rel= "noopener noreferrer">{project.name}</a>
+            <a href={project.links.youtube || project.links.live} class="link" target="_blank" rel= "noopener noreferrer">{project.name}</a>
           : 
             project.name
         }
