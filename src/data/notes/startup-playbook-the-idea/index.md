@@ -4,7 +4,7 @@ link: "https://playbook.samaltman.com/#idea"
 author: 'Sam Altman'
 authorLink: 'https://x.com/sama'
 foundDate: 2025-02-10
-oneLiner: 'Notes on things to keep in mind when it comes startup ideas'
+oneLiner: 'Notes on things to keep in mind when it comes to startup ideas'
 tags: ["startup"]
 ---
 
