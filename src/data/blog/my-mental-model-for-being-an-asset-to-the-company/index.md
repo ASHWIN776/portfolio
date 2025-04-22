@@ -7,7 +7,7 @@ tags: ["career", "mental model"]
 
 I currently work as a software engineer at [bravestudio Inc](https://bravestudio.co.jp/)
 
-Its been 2 years in this company, and after some really good advice from my CEO, serendipitous conversations with my seniors, and my own experiences, I stumbled upon a mental model that I follow while working on my tasks.
+Its been 2 years in this company, and after some really good advice from my CEO, serendipitous conversations with my seniors, and my own experiences, I stumbled upon a [mental model](https://fs.blog/mental-models/) that I follow while working on my tasks.
 
 So, here it is.
 
@@ -74,7 +74,7 @@ I feel really good when a team tackles challenges together, and I get to be a pa
 
 ---
 
-Currently this is working well for me, but it's not set on stone. 
+Currently this is working well for me, but it's not set in stone. 
 
 I am always open to learning new and better ways to do things. So, will be modifying the model over time.
 
