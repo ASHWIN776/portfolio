@@ -28,7 +28,7 @@
     "date": "Aug 2024",
     "skills": ["NextJS", "TypeScript", "Github App", "Octokit.js", "Prisma", "postgreSQL", "Tailwind CSS"],
     "oneLiner": "Bridging OS Incentives, Payments, and Proof of Skill",
-    "description": "- **Motivation**: Colosseum hackathon\n- **Web 3 Bounty System** for Open Source Projects\n - Included **Escrow**\n- Proof of skill for contributors\n- Learnt NextJS here",
+    "description": "- **Motivation**: Colosseum hackathon with [@i_aiymen](https://x.com/i_aiymen) and [@MeghaRose15](https://x.com/MeghaRose15)\n- **Web 3 Bounty System** for Open Source Projects\n - Included **Escrow**\n- Proof of skill for contributors\n- Learnt NextJS here",
     "imagePath": "/src/assets/projects/payobvio.png",
     "links": {
       "github": "https://github.com/payobv-io/payobv.io",
