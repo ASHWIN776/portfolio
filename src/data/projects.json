@@ -54,10 +54,10 @@
     "date": "Dec 2024",
     "skills": ["NextJS", "TypeScript", "Vercel AI SDK", "Supabase", "pgvector", "Tailwind CSS"],
     "oneLiner": "Save what catches your eye, recall it anytime",
-    "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes",
+    "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes\n- All Iterations:\n\t- [Latest](https://youtu.be/aJ1d9uX3g_Y) - Separate Page for adding content with Markdown Support, and Better UI\n\t- [First](https://youtu.be/IM7XrKOlbWQ)",
     "imagePath": "/src/assets/projects/recall.png",
     "links": {
-      "youtube": "https://youtu.be/IM7XrKOlbWQ"
+      "youtube": "https://youtu.be/aJ1d9uX3g_Y"
     }
   }
 ]
