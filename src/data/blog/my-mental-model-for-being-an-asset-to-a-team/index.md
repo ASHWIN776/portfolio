@@ -1,7 +1,7 @@
 ---
-title: 'My mental model for being an asset to the company'
+title: 'My mental model for being an asset to a team'
 pubDate: 2025-04-24
-oneLiner: 'Things I follow when working on a company project or task'
+oneLiner: 'My go-to process when contributing to a project at work'
 tags: ["career", "mental model"]
 ---
 
