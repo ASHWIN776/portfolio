@@ -5,7 +5,7 @@
     "date": "Aug 2021",
     "skills": ["JS", "PHP", "MySQL"],
     "oneLiner": "Multi-modal attendance management system: A Failed Startup",
-    "description": "- **Motivation**: I wanted to solve attendance management during online classes\n- Reduced the attendance taking and managing time by **90%**\n- **Used by IT department of my college**\n- Turned into a team project later, where we added the fingerprint scanner feature and improved the web app\n- Learnt PHP here",
+    "description": "- **Motivation** - I wanted to solve attendance management during online classes\n- Reduced the attendance taking and managing time by **90%**\n- **Used by IT department of my college**\n- Turned into a team project later, where we added the fingerprint scanner feature and improved the web app\n- Learnt PHP here",
     "imagePath": "/src/assets/projects/mark-p.png",
     "links": {
     }
@@ -41,7 +41,7 @@
     "date": "Jan 2025",
     "skills": ["Astro", "TypeScript", "Tailwind CSS"],
     "oneLiner": "Introducing myself to the world",
-    "description": "- **Motivation**: Wanted to showcase my work, and write blogs\n- Learnt Astro here",
+    "description": "- **Motivation** - Wanted to showcase my work, and write blogs\n- Learnt Astro here",
     "imagePath": "/src/assets/projects/portfolio.png",
     "links": {
       "github": "https://github.com/ashwin776/portfolio",
@@ -54,10 +54,23 @@
     "date": "Dec 2024",
     "skills": ["NextJS", "TypeScript", "Vercel AI SDK", "Supabase", "pgvector", "Tailwind CSS"],
     "oneLiner": "Save what catches your eye, recall it anytime",
-    "description": "- **Motivation**: Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes\n- All Iterations:\n\t- [Latest](https://youtu.be/aJ1d9uX3g_Y) - Separate Page for adding content with Markdown Support, and Better UI\n\t- [First](https://youtu.be/IM7XrKOlbWQ)",
+    "description": "- **Motivation** - Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes\n- All Iterations:\n\t- [Latest](https://youtu.be/aJ1d9uX3g_Y) - Separate page for adding content with Markdown Support, and Better UI\n\t- [First](https://youtu.be/IM7XrKOlbWQ)",
     "imagePath": "/src/assets/projects/recall.png",
     "links": {
       "youtube": "https://youtu.be/aJ1d9uX3g_Y"
+    }
+  },
+  {
+    "id": 6,
+    "name": "helm",
+    "date": "May 2025",
+    "skills": ["Expo", "NextJS", "TypeScript", "Zustand", "Vercel AI SDK", "Neon", "Drizzle ORM"],
+    "oneLiner": "Steer your finances with AI",
+    "description": "- **Motivation** - I realized I kept running into the same problems with money management apps:\n\t1. Recording expenses feels like a chore\n\t2. The apps rarely gave me meaningful or actionable insights\n\t3. Bill splitting is a real pain\n- This app aims to solves the above 'real' issues\n- Curious about the thought process? Read more [here](/blog/reimagining-a-money-management-app)",
+    "imagePath": "/src/assets/projects/helm.png",
+    "links": {
+      "github": "https://github.com/ashwin776/helm",
+      "youtube": "https://youtu.be/4HmYupihado"
     }
   }
 ]
