@@ -1,6 +1,6 @@
 ---
 title: 'Running TypeScript with Node.js'
-pubDate: 2025-03-02
+date: 2025-03-02
 oneLiner: 'Concise account on running ts with nodejs'
 tags: ["typescript", "nodejs"]
 ---
