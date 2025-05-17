@@ -1,6 +1,6 @@
 ---
 title: 'Re-imagining money management with AI'
-pubDate: 2025-05-15
+date: 2025-05-15
 oneLiner: 'Building a money management app that actually solves real problems'
 tags: ["finance", "ai", "side project", "app"]
 ---

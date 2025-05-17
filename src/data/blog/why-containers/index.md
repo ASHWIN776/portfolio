@@ -1,6 +1,6 @@
 ---
 title: 'Why Containers?'
-pubDate: 2025-03-07
+date: 2025-03-07
 oneLiner: 'Journey from Bare Metal to Containers'
 description: 'This is the first post of my new Astro blog.'
 tags: ["cloud computing", "docker", "container"]

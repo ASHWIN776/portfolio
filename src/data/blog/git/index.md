@@ -1,6 +1,6 @@
 ---
 title: 'Git: The Basics'
-pubDate: 2022-11-05
+date: 2022-11-05
 oneLiner: 'A beginner-friendly tutorial on Git'
 tags: ["git", "basics"]
 ---

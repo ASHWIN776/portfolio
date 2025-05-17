@@ -7,26 +7,19 @@ const blog = defineCollection({
     base: "./src/data/blog",
   }),
   schema: z.object({
+    // Common fields for all content types
     title: z.string(),
-    pubDate: z.date(),
+    date: z.date(),
     oneLiner: z.string(),
-    tags: z.array(z.string())
-  })
-})
-
-const notes = defineCollection({
-  loader: glob({
-    pattern: "**/*.md",
-    base: "./src/data/notes",
-  }),
-  schema: z.object({
-    title: z.string(),
-    link: z.string().url(),
-    author: z.string(),
-    authorLink: z.string().url(),
-    foundDate: z.date(),
-    oneLiner: z.string(),
-    tags: z.array(z.string())
+    tags: z.array(z.string()),
+    
+    // Field to distinguish between content types
+    contentType: z.enum(['post', 'note']).default('post'),
+    
+    // Fields specific to notes (optional for regular blog posts)
+    link: z.string().url().optional(),
+    author: z.string().optional(),
+    authorLink: z.string().url().optional(),
   })
 })
 
@@ -73,6 +66,5 @@ export const collections = {
   blog, 
   socials, 
   works, 
-  projects, 
-  notes 
+  projects
 };
