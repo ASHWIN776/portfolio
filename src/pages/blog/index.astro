@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 
 const pageTitle = "Blog";
 const allBlogs = (await getCollection("blog")).sort((a, b) => {
-  return b.data.pubDate.getTime() - a.data.pubDate.getTime();
+  return b.data.date.getTime() - a.data.date.getTime();
 });
 ---
 
