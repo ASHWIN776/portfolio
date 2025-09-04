@@ -36,6 +36,16 @@
     "companyLink": "https://bravestudio.co.jp/",
     "location": "Matsue, Japan",
     "startDate": "Nov 2023",
+    "endDate": "Aug 2025",
     "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped projects using **ReactJS, Rails**\n- Tools used: **Git, Docker, AWS, Figma**"
+  },
+  {
+    "id": 5,
+    "title": "Software Engineer",
+    "company": "ACTUAL Inc.",
+    "companyLink": "https://www.actu-al.co/en",
+    "location": "Kyoto, Japan",
+    "startDate": "Sep 2025",
+    "description": "- Shipping fast\n- Developing the mobile app for our new product - [ArchiX](https://archix.ai/)"
   }
 ]
