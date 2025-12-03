@@ -11,6 +11,7 @@ const { pageTitle, tabTitle = pageTitle } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{tabTitle}</title>
+		<link rel="alternate" type="application/rss+xml" title="Ashwin's Blog" href={new URL("rss.xml", Astro.site)} />
 	</head>
 	<body>
 		<main class="p-4 min-h-dvh md:max-w-2xl md:mx-auto flex flex-col gap-y-10 justify-between">
