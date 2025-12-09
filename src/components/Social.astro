@@ -3,10 +3,7 @@ import { getCollection } from "astro:content"
 import ResourceLink from "./ResourceLink.astro"
 import type { AstroInstance } from "astro"
 
-// Get socials collection
 const socials = await getCollection("socials")
-
-// Import all social icons
 const icons = import.meta.glob("/src/components/icons/socials/*.astro", { eager: true }) as Record<string, AstroInstance>
 
 const socialLinks = socials.map(social => ({
@@ -15,11 +12,14 @@ const socialLinks = socials.map(social => ({
   icon: icons[social.data.iconPath] 
 }))
 ---
-<div class="inline-flex gap-x-6 justify-center md:justify-start">
+<div class="inline-flex gap-x-6 justify-center flex-wrap gap-y-3 bg-aside p-3 rounded-lg">
   {
     socialLinks.map(link => (
-      <ResourceLink link={link.url}>
-        {link.icon ? <link.icon.default /> : link.name}
+      <ResourceLink link={link.url} class="border-none bg-transparent">
+        <div class="flex items-center justify-center gap-x-2">
+          <link.icon.default />
+          <span class="text-sm">{link.name}</span>
+        </div>
       </ResourceLink>
     ))
   }
