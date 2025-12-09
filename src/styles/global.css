@@ -31,7 +31,7 @@
   }
 
   .prose aside {
-    @apply bg-aside p-3 rounded-md;
+    @apply bg-aside p-3 rounded-lg;
   }
 }
 
