@@ -1,10 +1,11 @@
 ---
-const { link, openNewTab = true } = Astro.props;
+import { twMerge } from "tailwind-merge";
+const { link, class: className, openNewTab = true } = Astro.props;
 ---
 
 <a 
   href={link}
-  class="inline-flex items-center justify-center transition-colors border border-gray-600 bg-background hover:bg-[#151515] rounded-md cursor-pointer p-2 text-white"
+  class={twMerge("inline-flex items-center justify-center transition-colors border border-gray-600 bg-background hover:bg-[#151515] rounded-md cursor-pointer p-2 text-white", className)}
   {...(
     openNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {}
   )}

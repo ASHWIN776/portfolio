@@ -23,6 +23,9 @@ importers:
       sharp:
         specifier: ^0.33.5
         version: 0.33.5
+      tailwind-merge:
+        specifier: ^3.4.0
+        version: 3.4.0
       tailwindcss:
         specifier: ^4.0.6
         version: 4.0.6
@@ -1449,6 +1452,9 @@ packages:
 
   strnum@2.1.1:
     resolution: {integrity: sha512-7ZvoFTiCnGxBtDqJ//Cu6fWtZtc7Y3x+QOirG15wztbdngGSkht27o2pyGWrVy0b4WAy3jbKmnoK6g5VlVNUUw==}
+
+  tailwind-merge@3.4.0:
+    resolution: {integrity: sha512-uSaO4gnW+b3Y2aWoWfFpX62vn2sR3skfhbjsEnaBI81WD1wBLlHZe5sWf0AqjksNdYTbGBEd0UasQMT3SNV15g==}
 
   tailwindcss@4.0.6:
     resolution: {integrity: sha512-mysewHYJKaXgNOW6pp5xon/emCsfAMnO8WMaGKZZ35fomnR/T5gYnRg2/yRTTrtXiEl1tiVkeRt0eMO6HxEZqw==}
@@ -3362,6 +3368,8 @@ snapshots:
   strip-bom@3.0.0: {}
 
   strnum@2.1.1: {}
+
+  tailwind-merge@3.4.0: {}
 
   tailwindcss@4.0.6: {}
 
