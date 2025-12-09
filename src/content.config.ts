@@ -28,6 +28,7 @@ const socials = defineCollection({
   schema: z.object({
     name: z.string(),
     url: z.string().url(),
+    handle: z.string(),
     iconPath: z.string()
   })
 })

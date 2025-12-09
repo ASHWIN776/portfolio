@@ -3,30 +3,35 @@
     "id": 1,
     "name": "Github",
     "url": "https://www.github.com/ASHWIN776",
+    "handle": "ASHWIN776",
     "iconPath": "/src/components/icons/socials/Github.astro"
   },
   {
     "id": 2,
     "name": "Twitter",
-    "url": "https://x.com/Ashwin1Anil",
+    "url": "https://x.com/ashwinanill",
+    "handle": "@ashwinanill",
     "iconPath": "/src/components/icons/socials/Twitter.astro"
   },
   {
     "id": 3,
     "name": "Linkedin",
     "url": "https://www.linkedin.com/in/ashwin-anil-097161190/",
+    "handle": "ashwin-anil-097161190",
     "iconPath": "/src/components/icons/socials/Linkedin.astro"
   },
   {
     "id": 4,
     "name": "Mail",
     "url": "mailto:anilashwin2001@gmail.com",
+    "handle": "anilashwin2001@gmail.com",
     "iconPath": "/src/components/icons/socials/Mail.astro"
   },
   {
     "id": 5,
     "name": "Resume",
     "url": "https://drive.google.com/file/d/1zOluTSJo1PXHBqGuT7Fb5_mCzZvgXaDI/view?usp=sharing",
+    "handle": "PDF",
     "iconPath": "/src/components/icons/socials/Resume.astro"
   }
 ]
