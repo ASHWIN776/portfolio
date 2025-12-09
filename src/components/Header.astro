@@ -1,8 +1,6 @@
 ---
 import NavLink from "./NavLink.astro"
 
-const { pageTitle } = Astro.props
-
 const navLinks = [
   { label: "~", href: "/", pageTitle: "home" },
   { label: "./projects", href: "/projects", pageTitle: "projects" },
@@ -16,7 +14,7 @@ const navLinks = [
       navLinks.map(link => (
         <NavLink 
           link={link} 
-          currentPageTitle={pageTitle}
+          isActive={Astro.url.pathname === link.href}
         />
       ))
     }
