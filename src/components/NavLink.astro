@@ -4,5 +4,8 @@ const { link, isActive } = Astro.props
 
 <a 
   href={link.href} 
-  class={`font-mono text-sm secondary-link ${isActive ? "active-secondary-link" : ""}`}
+  class:list={[
+    `font-mono text-sm secondary-link`,
+    isActive ? "active-secondary-link" : null
+  ]}
 >{link.label}</a>
