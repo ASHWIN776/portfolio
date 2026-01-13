@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import SectionLayout from "../layouts/SectionLayout.astro";
 import { getContributionLevel, getFormattedDate } from "../utils/helpers";
 
 const contributions = await getCollection("githubContributions");
