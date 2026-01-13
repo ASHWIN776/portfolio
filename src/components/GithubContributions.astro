@@ -13,8 +13,8 @@ const data = contributions[0]?.data;
       {data.totalContributions} contributions in the last year
     </p>
 
-    <div class="overflow-x-auto pb-2 -webkit-overflow-scrolling-touch" id="contribution-container">
-      <div class="flex gap-[3px] items-start min-w-max">
+    <div class="overflow-x-auto pb-2 -webkit-overflow-scrolling-touch" dir="rtl">
+      <div class="flex gap-[3px] items-start min-w-max" dir="ltr">
         {data.weeks.map((week) => (
           <div class="flex flex-col gap-[3px]">
             {week.contributionDays.map((day) => (
@@ -76,12 +76,3 @@ const data = contributions[0]?.data;
     background-color: var(--color-secondary);
   }
 </style>
-
-<script>
-  const container = document.getElementById('contribution-container');
-  if (container) {
-    requestAnimationFrame(() => {
-      container.scrollLeft = container.scrollWidth;
-    });
-  }
-</script>
