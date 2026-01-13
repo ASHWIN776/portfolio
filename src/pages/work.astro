@@ -1,0 +1,18 @@
+---
+import { getCollection } from "astro:content"
+import SectionLayout from "../layouts/SectionLayout.astro"
+import WorkCard from "../components/WorkCard.astro"
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+const works = (await getCollection("works")).reverse()
+const pageTitle = 'Work'
+---
+<BaseLayout pageTitle={pageTitle}>
+  <SectionLayout title={pageTitle}>
+    {
+      works.map(exp => (
+        <WorkCard experience={exp.data} />
+      ))
+    }
+  </SectionLayout>
+</BaseLayout>
