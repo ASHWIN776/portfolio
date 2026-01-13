@@ -1,0 +1,87 @@
+---
+import { getCollection } from "astro:content";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import { getContributionLevel, getFormattedDate } from "../utils/helpers";
+
+const contributions = await getCollection("githubContributions");
+const data = contributions[0]?.data;
+---
+
+{data ? (
+  <div class="flex flex-col gap-y-4">
+    <p class="text-sm opacity-70">
+      {data.totalContributions} contributions in the last year
+    </p>
+
+    <div class="overflow-x-auto pb-2 -webkit-overflow-scrolling-touch" id="contribution-container">
+      <div class="flex gap-[3px] items-start min-w-max">
+        {data.weeks.map((week) => (
+          <div class="flex flex-col gap-[3px]">
+            {week.contributionDays.map((day) => (
+              <div
+                class={`w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs cursor-pointer transition-all duration-200 hover:scale-110 contribution-day level-${getContributionLevel(day.contributionCount)}`}
+                data-date={getFormattedDate(new Date(day.date))}
+                data-count={day.contributionCount}
+                title={`${day.contributionCount} contributions on ${getFormattedDate(new Date(day.date))}`}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2 text-xs opacity-70">
+      <span>Less</span>
+      <div class="flex gap-1">
+        <div class="w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs legend-box level-0"></div>
+        <div class="w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs legend-box level-1"></div>
+        <div class="w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs legend-box level-2"></div>
+        <div class="w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs legend-box level-3"></div>
+        <div class="w-[10px] h-[10px] md:w-3 md:h-3 rounded-xs legend-box level-4"></div>
+      </div>
+      <span>More</span>
+    </div>
+  </div>
+) : (
+  <div class="flex flex-col gap-y-4">
+    <p class="text-sm opacity-70">
+      GitHub contributions are temporarily unavailable. Please check back later.
+    </p>
+  </div>
+)}
+
+<style>
+  .contribution-day.level-0,
+  .legend-box.level-0 {
+    background-color: var(--color-aside);
+  }
+
+  .contribution-day.level-1,
+  .legend-box.level-1 {
+    background-color: color-mix(in srgb, var(--color-secondary) 30%, transparent);
+  }
+
+  .contribution-day.level-2,
+  .legend-box.level-2 {
+    background-color: color-mix(in srgb, var(--color-secondary) 50%, transparent);
+  }
+
+  .contribution-day.level-3,
+  .legend-box.level-3 {
+    background-color: color-mix(in srgb, var(--color-secondary) 75%, transparent);
+  }
+
+  .contribution-day.level-4,
+  .legend-box.level-4 {
+    background-color: var(--color-secondary);
+  }
+</style>
+
+<script>
+  const container = document.getElementById('contribution-container');
+  if (container) {
+    requestAnimationFrame(() => {
+      container.scrollLeft = container.scrollWidth;
+    });
+  }
+</script>
