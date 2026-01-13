@@ -1,5 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import { file, glob } from "astro/loaders";
+import { githubContributionsLoader } from "./loaders/github-contributions-loader";
 
 const blog = defineCollection({
   loader: glob({
@@ -63,9 +64,24 @@ const projects = defineCollection({
   })
 })
 
-export const collections = { 
-  blog, 
-  socials, 
-  works, 
-  projects
+const githubContributions = defineCollection({
+  loader: githubContributionsLoader(),
+  schema: z.object({
+    totalContributions: z.number(),
+    weeks: z.array(z.object({
+      contributionDays: z.array(z.object({
+        date: z.string(),
+        contributionCount: z.number(),
+        color: z.string()
+      }))
+    }))
+  })
+})
+
+export const collections = {
+  blog,
+  socials,
+  works,
+  projects,
+  githubContributions
 };

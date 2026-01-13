@@ -1,0 +1,20 @@
+name: Scheduled Rebuild
+
+on:
+  schedule:
+    # Run daily at midnight UTC
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages Deploy
+        run: |
+          curl -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" \
+            -H "Content-Type: application/json" \
+            -d '{"triggered_by":"scheduled-rebuild"}'
+
+      - name: Log deployment trigger
+        run: echo "Triggered Cloudflare Pages deployment at $(date)"

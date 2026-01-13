@@ -10,3 +10,9 @@ Secrets needed:
 
 #### Permission needed:
 - Cloudflare Pages: Read and write for the Account API Token
+
+### Environment Variables
+
+Refer `.env.example` for required environment variables
+
+> GITHUB_TOKEN - Required scope: read:user (read-only access to your profile data)
