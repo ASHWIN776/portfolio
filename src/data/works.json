@@ -5,9 +5,9 @@
     "company": "mark-P",
     "companyLink": "https://www.linkedin.com/company/mark-p",
     "location": "Kerala, India",
-    "startDate": "May 2022",
+    "startDate": "Aug 2021",
     "endDate": "May 2023",
-    "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college (3rd Yr)\n- Failed, and I shut it down because of lack of a USP. Learnt a lot though - never regretted it"
+    "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college\n- Failed, and I shut it down because of lack of a USP. Learnt a lot though - never regretted it"
   },
   {
     "id": 2,
@@ -46,6 +46,6 @@
     "companyLink": "https://www.actu-al.co/en",
     "location": "Kyoto, Japan",
     "startDate": "Sep 2025",
-    "description": "- Shipping fast\n- Developing the mobile app for our new product - [ArchiX](https://archix.ai/)"
+    "description": "- **Leading** development of the mobile app for [ArchiX](https://archix.ai/)\n- Also building full-stack web features\n- Shipping fast"
   }
 ]
