@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 <BaseLayout pageTitle="Blog" tabTitle={frontmatter.title}>
   <div class="flex flex-col gap-y-8 grow">
     <div class="flex flex-col gap-y-2">
-      <a href="/blog" class="link text-2xl">../</a>
+      <a href="/blog" class="link text-sm">← Back</a>
 
       <h1 class="text-2xl">{frontmatter.title}</h1>
       <p class="text-gray-400 text-xs">{getFormattedDate(frontmatter.date)}</p>
