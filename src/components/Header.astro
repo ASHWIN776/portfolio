@@ -4,7 +4,7 @@ import NavLink from "./NavLink.astro"
 const { pageTitle } = Astro.props
 
 const navLinks = [
-  { label: "Home", href: "/", pageTitle: "home" },
+  { label: pageTitle.toLowerCase() === "home" ? "Home" : "Ashwin Anil", href: "/", pageTitle: "home" },
   { label: "Projects", href: "/projects", pageTitle: "projects" },
   { label: "Blog", href: "/blog", pageTitle: "blog" },
   { label: "Work", href: "/work", pageTitle: "work" }
