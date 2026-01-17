@@ -9,6 +9,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: "https://ashwin-anil.pages.dev/",
+  site: "https://ashwin.im",
   integrations: [mdx()]
 });
