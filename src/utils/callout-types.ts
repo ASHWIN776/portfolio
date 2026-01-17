@@ -56,8 +56,8 @@ export const calloutTypes = {
   },
   summary: {
     defaultTitle: 'Summary',
-    bgClass: 'bg-[var(--color-callout-abstract-bg)]',
-    textClass: 'text-[var(--color-callout-abstract-text)]',
+    bgClass: 'bg-[var(--color-callout-summary-bg)]',
+    textClass: 'text-[var(--color-callout-summary-text)]',
     icon: '📋'
   },
 } as const;

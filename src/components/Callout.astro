@@ -19,15 +19,15 @@ const displayIcon = icon || config.icon;
   role="note"
   aria-label={`${config.defaultTitle} callout`}
 >
-  <div class="flex items-start gap-3">
+  <div class="flex items-start gap-x-3">
     <div class="flex-shrink-0 text-xl leading-none pt-0.5" aria-hidden="true">
       {displayIcon}
     </div>
-    <div class="flex-1 min-w-0">
+    <div class="flex-1">
       <div class={`font-semibold mb-2 ${config.textClass}`}>
         {displayTitle}
       </div>
-      <div class="text-gray-300 prose prose-invert prose-sm max-w-none [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_pre]:my-3 [&_ul]:my-2 [&_ol]:my-2 [&_li]:my-1">
+      <div class="text-gray-300 prose prose-invert max-w-none [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_pre]:my-3 [&_ul]:my-2 [&_ol]:my-2 [&_li]:my-1">
         <slot />
       </div>
     </div>
