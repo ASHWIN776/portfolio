@@ -5,11 +5,33 @@
   --color-background: #000000;
   --color-primary: #ffffffde;
   --color-secondary: #3c83f6;
+  --color-success: #041f09;
   --color-inline-code: #eb5757;
   --color-hr: #6a7282;
   --color-aside: #18181b;
-  --color-reference-box: #041f09;
-  
+
+  /* Callout colors */
+  --color-callout-note-bg: var(--color-aside);
+  --color-callout-note-text: var(--color-primary);
+
+  --color-callout-tip-bg: rgb(20 83 45 / 0.3);
+  --color-callout-tip-text: #86efac;
+
+  --color-callout-warning-bg: rgb(113 63 18 / 0.3);
+  --color-callout-warning-text: #fde047;
+
+  --color-callout-danger-bg: rgb(76 5 25 / 0.4);
+  --color-callout-danger-text: #fb464c;
+
+  --color-callout-success-bg: var(--color-success);
+  --color-callout-success-text: #44cf6e;
+
+  --color-callout-bug-bg: rgb(80 7 36 / 0.3);
+  --color-callout-bug-text: #f9a8d4;
+
+  --color-callout-summary-bg: rgb(49 46 129 / 0.3);
+  --color-callout-summary-text: #c7d2fe;
+
   --font-sans: 'Inter', sans-serif;
 }
 

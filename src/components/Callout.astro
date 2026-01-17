@@ -1,0 +1,35 @@
+---
+import { getCalloutConfig, type CalloutTypeKey } from '../utils/callout-types';
+
+interface Props {
+  type?: CalloutTypeKey | string;
+  title?: string;
+  icon?: string;
+}
+
+const { type = 'note', title, icon } = Astro.props;
+const config = getCalloutConfig(type);
+
+const displayTitle = title || config.defaultTitle;
+const displayIcon = icon || config.icon;
+---
+
+<div
+  class={`my-4 rounded-lg p-4 ${config.bgClass}`}
+  role="note"
+  aria-label={`${config.defaultTitle} callout`}
+>
+  <div class="flex items-start gap-3">
+    <div class="flex-shrink-0 text-xl leading-none pt-0.5" aria-hidden="true">
+      {displayIcon}
+    </div>
+    <div class="flex-1 min-w-0">
+      <div class={`font-semibold mb-2 ${config.textClass}`}>
+        {displayTitle}
+      </div>
+      <div class="text-gray-300 prose prose-invert prose-sm max-w-none [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_pre]:my-3 [&_ul]:my-2 [&_ol]:my-2 [&_li]:my-1">
+        <slot />
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,7 +4,7 @@ import { githubContributionsLoader } from "./loaders/github-contributions-loader
 
 const blog = defineCollection({
   loader: glob({
-    pattern: "**/*.md",
+    pattern: "**/*.{md,mdx}",
     base: "./src/data/blog",
   }),
   schema: z.object({
