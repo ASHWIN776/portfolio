@@ -17,3 +17,4 @@ pnpm deploy
 ## Documentation
 
 - Astro: https://docs.astro.build/llms.txt
+- Cloudflare: https://developers.cloudflare.com/llms-full.txt
