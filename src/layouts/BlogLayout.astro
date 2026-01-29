@@ -3,44 +3,73 @@ import { getFormattedDate } from "../utils/helpers";
 import BaseLayout from "./BaseLayout.astro";
 import Prose from "../components/Prose.astro";
 
-const { frontmatter } = Astro.props;
+const { frontmatter, headings = [] } = Astro.props;
 ---
 
-<BaseLayout pageTitle="Blog" tabTitle={frontmatter.title}>
-  <div class="flex flex-col gap-y-8 grow">
-    <div class="flex flex-col gap-y-2">
-      <a href="/blog" class="link text-sm">← Back</a>
+<BaseLayout pageTitle="Blog" tabTitle={frontmatter.title} wideLayout={true}>
+  <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
+    <aside class="hidden lg:block">
+      <nav class="sticky top-4">
+        <h2 class="text-sm font-bold mb-4 text-gray-400">Table of Contents</h2>
+        {headings.length > 0 ? (
+          <ul class="flex flex-col gap-y-2 text-sm" id="toc-list">
+            {headings.map((heading: any) => (
+              <li 
+                style={`margin-left: ${(heading.depth - 2) * 12}px`
+              }>
+                <a
+                  href={`#${heading.slug}`}
+                  data-heading-id={heading.slug}
+                  class="toc-link text-gray-300 hover:text-secondary transition-colors duration-200"
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="text-gray-500 text-xs">No headings found</p>
+        )}
+      </nav>
+    </aside>
 
-      <h1 class="text-2xl">{frontmatter.title}</h1>
-      <p class="text-gray-400 text-xs">{getFormattedDate(frontmatter.date)}</p>
-    </div>
-    
-    {frontmatter.contentType === 'note' ? (
-      <div class="flex flex-col bg-success gap-y-2 p-3 rounded-md">
-        <p>
-          Checkout the <a 
-          href={frontmatter.link} 
-          class="link font-bold" 
-          target="_blank"
-          rel="noopener noreferrer"
-          >resource</a> here.
-        </p>
-        
-        <p>
-          Thankful to <a 
-          href={frontmatter.authorLink} 
-          class="link font-bold" 
-          target="_blank"
-          rel="noopener noreferrer"
-          >{frontmatter.author}</a> for putting this out there.
-        </p>
+    <div class="flex flex-col gap-y-8 max-w-2xl mx-auto w-full">
+      <div class="flex flex-col gap-y-2">
+        <a href="/blog" class="link text-sm">← Back</a>
+
+        <h1 class="text-2xl">{frontmatter.title}</h1>
+        <p class="text-gray-400 text-xs">{getFormattedDate(frontmatter.date)}</p>
       </div>
-    ) : undefined }
-    
-    <div class="flex flex-col gap-y-4">
-      <Prose>
-        <slot />
-      </Prose>
+
+      {frontmatter.contentType === 'note' ? (
+        <div class="flex flex-col bg-success gap-y-2 p-3 rounded-md">
+          <p>
+            Checkout the <a
+            href={frontmatter.link}
+            class="link font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+            >resource</a> here.
+          </p>
+
+          <p>
+            Thankful to <a
+            href={frontmatter.authorLink}
+            class="link font-bold"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{frontmatter.author}</a> for putting this out there.
+          </p>
+        </div>
+      ) : undefined }
+
+      <div class="flex flex-col gap-y-4">
+        <Prose>
+          <slot />
+        </Prose>
+      </div>
     </div>
+    
+    <div class="hidden lg:block"></div>
   </div>
 </BaseLayout>
