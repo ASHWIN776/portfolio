@@ -1,0 +1,139 @@
+---
+title: 'The "How AI Impacts Skill Formation" paper'
+link: "https://arxiv.org/abs/2601.20245"
+author: 'Anthropic'
+authorLink: 'https://www.anthropic.com/'
+date: 2026-02-02
+oneLiner: 'Research paper reading notes on "How AI Impacts Skill Formation"'
+tags: ["ai", "learning", "research paper"]
+contentType: 'note'
+---
+
+I'm always thinking about how knowledge workers can become high value while using AI. 
+
+[Learning by doing](https://en.wikipedia.org/wiki/Learning-by-doing) is effective if you are getting stuck at problems/obstacles and clearing them yourselves - learning from it. With AI, the doing is happening but what about the learning?
+
+Below are my notes from a research paper by Anthropic on [How AI impacts skill formation](https://arxiv.org/abs/2601.20245), which gives useful insights on the outcomes of different usage patterns of AI.
+
+## Introduction
+
+The paper answers these questions: 
+1. Does AI assistance improve task completion productivity when new skills are required?
+2. How does using AI assistance affect the development of these new skills?
+
+## Procedure
+
+![Procedure](./assets/test-procedure.png)
+
+They conducted randomized experiments that measure skill formation by asking participants to complete coding tasks with a new python library - [Trio](https://github.com/python-trio/trio)
+
+<Callout type="note" title="About the Participants">
+  People who self-reported having more than 1 year of Python experience, code in Python at least once a week, have tried AI coding assistance at least a few times, and have never used the Trio library before were recruited for this study.
+</Callout>
+
+It is assumed that 4 types of questions can help to assess mastery of coding skills:
+
+- **Debugging** - Crucial for detecting when AI-generated code is incorrect and understanding why it fails.
+- **Code Reading** - Enables humans to understand and verify AI-written code before deployment.
+- **Code Writing** - Will be less important with further integration of AI coding tools than high-level system design. This was excluded from the experiment as this can be easily corrected through AI queries or web searches.
+- **Conceptual** - Conceptual understanding is critical to assess whether AI-generated code uses appropriate design patterns that adheres to how the library should be used.
+
+## Results
+
+Below are the findings - answers to the research questions we began this blog with:
+
+> Does AI assistance improve task completion productivity when new skills are required?
+
+**Answer** - The productivity/acceleration in completion time with AI assitance was **statistically negligent**. But, through an in-depth qualitative analysis of screen recordings of every participant, this is explained through the **additional time some participants invested in interacting with the AI assistant**.
+
+> How does using AI assistance affect the development of these new skills?
+
+**Answer** - Using AI assistance to complete tasks that involve this new library resulted in a **reduction in the evaluation score by 17% or two grade points**.
+
+## Notes on Qualitative Analysis
+
+Above answers are derived from the statistical results of the study, but there were some interesting learnings from the qualitative analysis - mainly from manually annotating the screen recordings.
+
+![AI Interaction Patterns](./assets/ai-interaction-patterns.png)
+
+The **way of using AI showed a stark difference in test results**. This can be classified as:
+- Low-scoring interaction patterns (24-39% scores)
+- High-scoring interaction patterns (65-86% scores) 
+
+### Low-Scoring Interaction Patterns
+
+Focus is on getting the work done.
+
+#### 1. AI Delegation
+
+- Participants wholly relied on AI to write code and complete the task.
+- Fastest completion.
+
+#### 2. Progressive AI Reliance
+
+- Participants started by asking 1 or 2 questions and eventually delegated all code writing to the AI Assistant. The questions were for task 1, but till they reached task 2 - everything was fully delegated.
+- They scored relatively lower than the AI delegation people - this is counterintuitive, I am not sure why?
+
+#### 3. Iterative AI Debugging
+
+- Participants in this group relied on AI to debug or verify their code.
+- Relied on the assistant to solve problems, rather than asking follow-up questions
+- Poor quiz scores and were relatively slower.
+
+### High-Scoring Interaction Patterns
+
+Here the focus is not just work completion, but conceptual understanding too.
+
+#### 1. Generation-Then-Comprehension (86% score + 24 mins)
+
+- Participants first generated code and then manually copied or pasted code into their work.
+- After code generation, they asked follow-up questions to improve understanding.
+
+#### 2. Hybrid Code-Explanation (68% score + 24 mins) 
+
+- Participants asked for code generations with their explanations.
+- Took comparitively more time.
+
+#### 3. Conceptual Inquiry (65% score + 22 mins)
+
+- Participant only asked conceptual questions and relied on their understanding to complete the task.
+- Encountered many errors, but resolved them independently.
+- Fastest among this pattern.
+
+---
+
+## Thoughts
+
+This is a good study done by Anthropic, and I appreciate them for putting this out even though they are an AI company, and are also pushing claude code so much!
+
+I figure there are high chances AI can turn out disastrous for skill development in students and novice programmers if not used carefully. 
+
+<Callout type='bug' title='Why the Inclination?'>
+Majority of novice programmers are inclining themselves to using AI and delegating their thinking on solving problems, and I think it's because of the following factors (this can easily be an endless list - but I am listing out the ones I have seen frequently):
+1. Failing to endure the struggles and frustrations when learning something new and resorting to AI, hence falling into the trap of false progress.
+2. Strict deadlines in workplaces.
+3. FOMO - Everybody is using it and finishing tasks early, why shouldn't I?
+</Callout>
+
+Since the current frontier models are very good at agentic coding - they can complete tasks in no time, and they can end up giving you a fake sense of progress in skill formation if you don't know whats going on conceptually. The abilities of AI are only going up with new models, or atleast that's what the model providers are aiming at. That means getting stuck, or getting forced to solve problems which are required for skill formation, are highly improbable. 
+
+After reading the paper, I am planning to be hell bent on approaching new skills with the first principles - `fall down, and stand up kind of learning approach`. Embrace problems, frequent situations of confusion and getting stuck.
+
+I'd like to clear that **this is not a no to AI, but the usage pattern needs to be different and well thought out**. You can prompt and use it however you want. 
+
+So, **use it to fuel your curiousity!**
+
+I feel the constant use of AI in everything especially "thinking" is a blind pursuit towards becoming the ["hive mind"](https://en.wikipedia.org/wiki/Group_mind_(science_fiction)) or ["pluribus"](https://en.wikipedia.org/wiki/Group_mind_(science_fiction))ification of oneself. No thanks, I prefer my individuality - let's be careful.
+
+
+
+
+
+
+
+
+
+
+
+
+
