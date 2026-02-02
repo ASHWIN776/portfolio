@@ -8,12 +8,40 @@ const pageTitle = "Projects"
 const projects = (await getCollection("projects")).reverse()
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <SectionLayout title="Projects">
-    {
-      projects.map(project => (
-        <ProjectCard project={project.data} />
-      ))
-    }
-  </SectionLayout>
+<BaseLayout pageTitle={pageTitle} wideLayout={true}>
+  <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
+    <aside class="hidden lg:block">
+      <nav class="sticky top-4">
+        <h2 class="text-sm font-bold mb-4 text-gray-400">Table of Contents</h2>
+        {projects.length > 0 ? (
+          <ol class="flex flex-col gap-y-2 text-sm" id="toc-list">
+            {projects.map((project, index) => (
+              <li>
+                <a
+                  href={`#${project.data.name.toLowerCase().replace(/ /g, '-')}`}
+                  class="text-gray-300 hover:text-secondary transition-colors duration-200"
+                >
+                  {index + 1}. {project.data.name}
+                </a>
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p class="text-gray-500 text-xs">No headings found</p>
+        )}
+      </nav>
+    </aside>
+
+    <div class="flex flex-col gap-y-8 max-w-2xl mx-auto w-full">
+      <SectionLayout title="Projects">
+        {
+          projects.map(project => (
+            <ProjectCard project={project.data} />
+          ))
+        }
+      </SectionLayout>
+    </div>
+
+    <div class="hidden lg:block"></div>
+  </div>
 </BaseLayout>

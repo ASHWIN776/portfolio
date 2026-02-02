@@ -4,7 +4,7 @@
     "name": "mark-P",
     "date": "Aug 2021",
     "skills": ["JS", "PHP", "MySQL"],
-    "oneLiner": "Multi-modal attendance management system: A Failed Startup",
+    "oneLiner": "Multi-modal attendance management system: My Failed Startup",
     "description": "- **Motivation** - I wanted to solve attendance management during online classes\n- Reduced the attendance taking and managing time by **90%**\n- **Used by IT department of my college**\n- Turned into a team project later, where we added the fingerprint scanner feature and improved the web app\n- Learnt PHP here",
     "imagePath": "/src/assets/projects/mark-p.png",
     "links": {
