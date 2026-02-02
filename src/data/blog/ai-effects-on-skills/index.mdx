@@ -28,7 +28,10 @@ The paper answers these questions:
 They conducted randomized experiments that measure skill formation by asking participants to complete coding tasks with a new python library - [Trio](https://github.com/python-trio/trio)
 
 <Callout type="note" title="About the Participants">
-  People who self-reported having more than 1 year of Python experience, code in Python at least once a week, have tried AI coding assistance at least a few times, and have never used the Trio library before were recruited for this study.
+  1. More than 1 year of Python experience
+  2. Code in Python at least once a week
+  3. Tried AI coding assistance at least a few times
+  4. Never used the Trio library before were recruited for this study.
 </Callout>
 
 It is assumed that 4 types of questions can help to assess mastery of coding skills:
@@ -62,23 +65,36 @@ The **way of using AI showed a stark difference in test results**. This can be c
 
 ### Low-Scoring Interaction Patterns
 
-Focus is on getting the work done.
+Focus is on just getting the work done.
 
-#### 1. AI Delegation
+#### 1. AI Delegation (39% score + 19.5 mins)
 
+<Callout type='summary' title='Info'>
 - Participants wholly relied on AI to write code and complete the task.
 - Fastest completion.
+</Callout>
 
-#### 2. Progressive AI Reliance
+Although the completion time was the lowest among all - which is understandable, this particular interaction pattern is very dangerous. It gets the work done, and we are left with no learnings, but a fake sense of progress, and a ton loads of appreciation from others (especially in workplaces).
 
+#### 2. Progressive AI Reliance (35% score + 22 mins)
+
+<Callout type='summary' title='Info'>
 - Participants started by asking 1 or 2 questions and eventually delegated all code writing to the AI Assistant. The questions were for task 1, but till they reached task 2 - everything was fully delegated.
-- They scored relatively lower than the AI delegation people - this is counterintuitive, I am not sure why?
+- They scored relatively lower than the AI delegation people.
+</Callout>
 
-#### 3. Iterative AI Debugging
+The score is counterintuitive, I am not sure why?*
+But, eventually ai delegation happened in task 2, which is a red light.
 
+#### 3. Iterative AI Debugging (24% score + 31mins)
+
+<Callout type='summary' title='Info'>
 - Participants in this group relied on AI to debug or verify their code.
 - Relied on the assistant to solve problems, rather than asking follow-up questions
 - Poor quiz scores and were relatively slower.
+</Callout>
+
+I think of this as a lock-in on an approach to solve a problem - which ofcourse the AI decides, since its doing all the thinking here. This is risky as there are chances that the approach is wrong - because of less context on the problem, or low quality prompting. Doing iterative debugging may clear you of the errors, but never takes a step-back on the approach which inturn gives you more errors down the road.
 
 ### High-Scoring Interaction Patterns
 
@@ -86,19 +102,31 @@ Here the focus is not just work completion, but conceptual understanding too.
 
 #### 1. Generation-Then-Comprehension (86% score + 24 mins)
 
+<Callout type='summary' title='Info'>
 - Participants first generated code and then manually copied or pasted code into their work.
 - After code generation, they asked follow-up questions to improve understanding.
+</Callout>
+
+People who are delegating everything to AI, should star asking follow-up questions after code generation or work completion as this is just 1 more query and gradually will let them jump to the High-Scoring interaction pattern.
 
 #### 2. Hybrid Code-Explanation (68% score + 24 mins) 
 
+<Callout type='summary' title='Info'>
 - Participants asked for code generations with their explanations.
 - Took comparitively more time.
+</Callout>
+
+I think this approach is strong as it helps to maneuver the AI if its wrongly thinking the problem/solution. Helps complete work, and also form a good understanding of the task with relatively less tokens.
 
 #### 3. Conceptual Inquiry (65% score + 22 mins)
 
+<Callout type='summary' title='Info'>
 - Participant only asked conceptual questions and relied on their understanding to complete the task.
 - Encountered many errors, but resolved them independently.
 - Fastest among this pattern.
+</Callout>
+
+I love this approach of using AI only for understanding the concepts and brainstorming. I feel this approach helps a lot when we learn new skills as encountering errors are important, and this way you are using the capabilities of AI without taking away the struggle and frustration that comes with learning something new. 
 
 ---
 
