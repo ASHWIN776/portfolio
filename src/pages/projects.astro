@@ -18,7 +18,7 @@ const projects = (await getCollection("projects")).reverse()
             {projects.map((project, index) => (
               <li>
                 <a
-                  href={`#${project.data.name.toLowerCase().replace(/ /g, '-')}`}
+                  href={`#${project.data.name}`}
                   class="text-gray-300 hover:text-secondary transition-colors duration-200"
                 >
                   {index + 1}. {project.data.name}
