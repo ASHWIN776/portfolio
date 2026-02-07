@@ -2,6 +2,7 @@
 import { getFormattedDate } from "../utils/helpers";
 import BaseLayout from "./BaseLayout.astro";
 import Prose from "../components/Prose.astro";
+import MobileToc from "../components/MobileToc.astro";
 
 const { frontmatter, headings = [] } = Astro.props;
 ---
@@ -62,6 +63,8 @@ const { frontmatter, headings = [] } = Astro.props;
           </p>
         </div>
       ) : undefined }
+
+      <MobileToc headings={headings} />
 
       <div class="flex flex-col gap-y-4">
         <Prose>
