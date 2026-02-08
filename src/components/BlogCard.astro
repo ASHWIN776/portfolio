@@ -10,8 +10,8 @@ const { blog } = Astro.props
         <a href={blog.link} class="link">{blog.title}</a>
       </h2>
     
-    <p class="text-gray-400 text-xs">{getFormattedDate(blog.date)}</p>
+    <p class="text-muted text-xs">{getFormattedDate(blog.date)}</p>
   </div>
 
-  <p class="text-sm text-gray-300">{blog.oneLiner}</p>
+  <p class="text-sm text-subtle">{blog.oneLiner}</p>
 </div>

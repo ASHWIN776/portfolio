@@ -15,6 +15,17 @@ const { pageTitle, wideLayout = false } = Astro.props
 		<title>{pageTitle}</title>
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<link rel="alternate" type="application/rss+xml" title="Ashwin's Blog" href={new URL("rss.xml", Astro.site)} />
+		<script is:inline>
+			if (localStorage.getItem('theme') !== 'light') {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
+		<script is:inline>
+			document.addEventListener('astro:before-swap', (e) => {
+				const dark = document.documentElement.classList.contains('dark');
+				e.newDocument.documentElement.classList.toggle('dark', dark);
+			});
+		</script>
 		<ClientRouter />
 	</head>
 	<body>

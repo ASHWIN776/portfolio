@@ -21,18 +21,18 @@ const socialLinks = socials.map(social => ({
       socialLinks.map(link => (
         <ResourceLink 
           link={link.url} 
-          class="group w-full items-center justify-between gap-3 border border-gray-800 bg-aside p-4 text-left hover:border-gray-600 hover:bg-[#151515]"
+          class="group w-full items-center justify-between gap-3 border border-divider-soft bg-aside p-4 text-left hover:border-divider hover:bg-surface"
         >
           <div class="flex items-center gap-3">
-            <div class="flex h-10 w-10 items-center justify-center text-white">
+            <div class="flex h-10 w-10 items-center justify-center text-heading">
               <link.icon.default class="h-6 w-6" />
             </div>
             <div class="flex flex-col gap-[2px]">
               <span class="font-semibold leading-tight">{link.name}</span>
-              <span class="text-sm leading-tight text-gray-400">{link.handle}</span>
+              <span class="text-sm leading-tight text-muted">{link.handle}</span>
             </div>
           </div>
-          <span class="rounded-md border border-transparent p-1 text-gray-400 transition-colors group-hover:border-gray-700 group-hover:text-white">
+          <span class="rounded-md border border-transparent p-1 text-muted transition-colors group-hover:border-divider group-hover:text-heading">
             <svg viewBox="0 0 20 20" fill="none" class="h-4 w-4">
               <path d="M7.5 12.5 12.5 7.5M8 7.5h4.5V12" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
             </svg>

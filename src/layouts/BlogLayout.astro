@@ -11,7 +11,7 @@ const { frontmatter, headings = [] } = Astro.props;
   <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
     <aside class="hidden lg:block">
       <nav class="sticky top-4">
-        <h2 class="text-sm font-bold mb-4 text-gray-400">Table of Contents</h2>
+        <h2 class="text-sm font-bold mb-4 text-muted">Table of Contents</h2>
         {headings.length > 0 ? (
           <ul class="flex flex-col gap-y-2 text-sm" id="toc-list">
             {headings.map((heading: any) => (
@@ -21,7 +21,7 @@ const { frontmatter, headings = [] } = Astro.props;
                 <a
                   href={`#${heading.slug}`}
                   data-heading-id={heading.slug}
-                  class="toc-link text-gray-300 hover:text-secondary transition-colors duration-200"
+                  class="toc-link text-subtle hover:text-secondary transition-colors duration-200"
                 >
                   {heading.text}
                 </a>
@@ -29,7 +29,7 @@ const { frontmatter, headings = [] } = Astro.props;
             ))}
           </ul>
         ) : (
-          <p class="text-gray-500 text-xs">No headings found</p>
+          <p class="text-faint text-xs">No headings found</p>
         )}
       </nav>
     </aside>
@@ -39,7 +39,7 @@ const { frontmatter, headings = [] } = Astro.props;
         <a href="/blog" class="link text-sm">← Back</a>
 
         <h1 class="text-2xl">{frontmatter.title}</h1>
-        <p class="text-gray-400 text-xs">{getFormattedDate(frontmatter.date)}</p>
+        <p class="text-muted text-xs">{getFormattedDate(frontmatter.date)}</p>
       </div>
 
       {frontmatter.contentType === 'note' ? (
