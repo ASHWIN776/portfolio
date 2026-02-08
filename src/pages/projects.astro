@@ -12,14 +12,14 @@ const projects = (await getCollection("projects")).reverse()
   <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
     <aside class="hidden lg:block">
       <nav class="sticky top-4">
-        <h2 class="text-sm font-bold mb-4 text-gray-400">Table of Contents</h2>
+        <h2 class="text-sm font-bold mb-4 text-muted">Table of Contents</h2>
         {projects.length > 0 ? (
           <ol class="flex flex-col gap-y-2 text-sm" id="toc-list">
             {projects.map((project, index) => (
               <li>
                 <a
                   href={`#${project.data.name}`}
-                  class="text-gray-300 hover:text-secondary transition-colors duration-200"
+                  class="text-subtle hover:text-secondary transition-colors duration-200"
                 >
                   {index + 1}. {project.data.name}
                 </a>
@@ -27,7 +27,7 @@ const projects = (await getCollection("projects")).reverse()
             ))}
           </ol>
         ) : (
-          <p class="text-gray-500 text-xs">No headings found</p>
+          <p class="text-faint text-xs">No headings found</p>
         )}
       </nav>
     </aside>

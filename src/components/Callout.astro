@@ -15,7 +15,7 @@ const displayIcon = icon || config.icon;
 ---
 
 <div
-  class={`my-4 rounded-lg p-4 ${config.bgClass}`}
+  class={`my-4 rounded-md p-4 ${config.bgClass}`}
   role="note"
   aria-label={`${config.defaultTitle} callout`}
 >
@@ -27,7 +27,7 @@ const displayIcon = icon || config.icon;
       <div class={`font-semibold mb-2 ${config.textClass}`}>
         {displayTitle}
       </div>
-      <div class="text-gray-300 prose prose-invert max-w-none [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_pre]:my-3 [&_ul]:my-2 [&_ol]:my-2 [&_li]:my-1">
+      <div class="text-subtle prose max-w-none [&>p:first-child]:mt-0 [&>p:last-child]:mb-0 [&_pre]:my-3 [&_ul]:my-2 [&_ol]:my-2 [&_li]:my-1">
         <slot />
       </div>
     </div>

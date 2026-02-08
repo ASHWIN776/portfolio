@@ -1,14 +1,73 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme{
+  /* Light mode defaults */
+  --color-background: #ffffff;
+  --color-primary: #1a1a1a;
+  --color-secondary: #2563eb;
+  --color-heading: #0f0f0f;
+  --color-aside: #f4f4f5;
+  --color-surface: #ebebeb;
+  --color-muted: #6b7280;
+  --color-subtle: #374151;
+  --color-faint: #9ca3af;
+  --color-divider: #d4d4d8;
+  --color-divider-soft: #e4e4e7;
+  --color-divider-bold: #71717a;
+  --color-inline-code: #dc2626;
+  --color-hr: #d4d4d8;
+  --color-success: #dcfce7;
+  --color-code-bg: #f4f4f5;
+  --color-tag-bg: #18181b;
+  --color-tag-text: #ffffff;
+
+  /* Callout colors */
+  --color-callout-note-bg: var(--color-aside);
+  --color-callout-note-text: var(--color-primary);
+
+  --color-callout-tip-bg: rgb(20 83 45 / 0.1);
+  --color-callout-tip-text: #15803d;
+
+  --color-callout-warning-bg: rgb(113 63 18 / 0.1);
+  --color-callout-warning-text: #a16207;
+
+  --color-callout-danger-bg: rgb(76 5 25 / 0.1);
+  --color-callout-danger-text: #dc2626;
+
+  --color-callout-success-bg: var(--color-success);
+  --color-callout-success-text: #16a34a;
+
+  --color-callout-bug-bg: rgb(80 7 36 / 0.1);
+  --color-callout-bug-text: #be185d;
+
+  --color-callout-summary-bg: rgb(49 46 129 / 0.1);
+  --color-callout-summary-text: #4338ca;
+
+  --font-sans: 'Inter', sans-serif;
+}
+
+html.dark {
   --color-background: #000000;
   --color-primary: #ffffffde;
   --color-secondary: #3c83f6;
-  --color-success: #041f09;
+  --color-heading: #ffffff;
+  --color-aside: #18181b;
+  --color-surface: #151515;
+  --color-muted: #9ca3af;
+  --color-subtle: #d1d5db;
+  --color-faint: #6b7280;
+  --color-divider: #4b5563;
+  --color-divider-soft: #27272a;
+  --color-divider-bold: #d1d5db;
   --color-inline-code: #eb5757;
   --color-hr: #6a7282;
-  --color-aside: #18181b;
+  --color-success: #041f09;
+  --color-code-bg: rgb(0 0 0 / 50%);
+  --color-tag-bg: #ffffff;
+  --color-tag-text: #000000;
 
   /* Callout colors */
   --color-callout-note-bg: var(--color-aside);
@@ -31,16 +90,14 @@
 
   --color-callout-summary-bg: rgb(49 46 129 / 0.3);
   --color-callout-summary-text: #c7d2fe;
-
-  --font-sans: 'Inter', sans-serif;
 }
 
 @layer utilities {
   .prose {
     --tw-prose-body: var(--color-primary);
-    --tw-prose-headings: white;
+    --tw-prose-headings: var(--color-heading);
     --tw-prose-links: var(--color-secondary);
-    --tw-prose-bold: white;
+    --tw-prose-bold: var(--color-heading);
     --tw-prose-counters: var(--color-primary);
     --tw-prose-bullets: var(--color-primary);
     --tw-prose-quotes: var(--color-primary);
@@ -48,7 +105,7 @@
     --tw-prose-captions: var(--color-primary);
     --tw-prose-code: var(--color-inline-code);
     --tw-prose-pre-code: var(--color-primary);
-    --tw-prose-pre-bg: rgb(0 0 0 / 50%);
+    --tw-prose-pre-bg: var(--color-code-bg);
     --tw-prose-hr: var(--color-hr);
   }
 
@@ -66,7 +123,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  @apply text-white font-mono font-bold
+  @apply text-heading font-mono font-bold
 }
 
 .link{
@@ -74,15 +131,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .secondary-link{
-  @apply text-gray-400 hover:text-gray-50 transition-[color];
+  @apply text-muted hover:text-heading transition-[color];
 }
 
 .active-secondary-link{
-  @apply text-white;
+  @apply text-heading;
 }
 
 .author-link{
-  @apply border-b-2 border-gray-600 transition-[border-color] hover:border-gray-300
+  @apply border-b-2 border-divider transition-[border-color] hover:border-divider-bold
 }
 
 @font-face {
