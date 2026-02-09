@@ -1,51 +1,63 @@
 [
   {
-    "id": 1,
-    "title": "Cofounder",
-    "company": "mark-P",
-    "companyLink": "https://www.linkedin.com/company/mark-p",
-    "location": "Kerala, India",
-    "startDate": "Aug 2021",
-    "endDate": "May 2023",
-    "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college\n- Failed, and I shut it down because of lack of a USP. Learnt a lot though - never regretted it"
-  },
-  {
-    "id": 2,
-    "title": "Software Eng. Intern",
-    "company": "TOA",
-    "companyLink": "https://www.toasoft.co.jp/",
-    "location": "Yonago, Japan",
-    "startDate": "Feb 2023",
-    "endDate": "Feb 2023",
-    "description": "- Frontend development using **ReactJS**\n- Focus was on finishing as much screens as possible(quantity)"
-  },
-  {
-    "id": 3,
-    "title": "Software Eng. Intern",
-    "company": "bravestudio Inc.",
-    "companyLink": "https://bravestudio.co.jp/",
-    "location": "Matsue, Japan",
-    "startDate": "Jun 2023",
-    "endDate": "Nov 2023",
-    "description": "- Frontend development using **ReactJS**\n- Focused on writing **clean and maintainable** code"
-  },
-  {
-    "id": 4,
-    "title": "Full Stack Software Engineer", 
-    "company": "bravestudio Inc.",
-    "companyLink": "https://bravestudio.co.jp/",
-    "location": "Matsue, Japan",
-    "startDate": "Nov 2023",
-    "endDate": "Aug 2025",
-    "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped projects using **ReactJS, Rails**\n- Tools used: **Git, Docker, AWS, Figma**"
-  },
-  {
-    "id": 5,
-    "title": "Software Engineer",
+    "id": "actual",
     "company": "Actual Inc.",
     "companyLink": "https://www.actu-al.co/en",
     "location": "Kyoto, Japan",
-    "startDate": "Sep 2025",
-    "description": "- **Leading** development of the mobile app for [ArchiX](https://archix.ai/)\n- Also building full-stack web features\n- Shipping fast"
+    "positions": [
+      {
+        "title": "Software Engineer",
+        "startDate": "Sep 2025",
+        "description": "- **Leading** development of the mobile app for [ArchiX](https://archix.ai/)\n- Also building full-stack web features\n- Shipping fast"
+      }
+    ]
+  },
+  {
+    "id": "bravestudio",
+    "company": "bravestudio Inc.",
+    "companyLink": "https://bravestudio.co.jp/",
+    "location": "Matsue, Japan",
+    "positions": [
+      {
+        "title": "Full Stack Software Engineer",
+        "startDate": "Nov 2023",
+        "endDate": "Aug 2025",
+        "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped projects using **ReactJS, Rails**\n- Tools used: **Git, Docker, AWS, Figma**"
+      },
+      {
+        "title": "Software Eng. Intern",
+        "startDate": "Jun 2023",
+        "endDate": "Nov 2023",
+        "description": "- Frontend development using **ReactJS**\n- Focused on writing **clean and maintainable** code"
+      }
+    ]
+  },
+  {
+    "id": "toa",
+    "company": "TOA",
+    "companyLink": "https://www.toasoft.co.jp/",
+    "location": "Yonago, Japan",
+    "positions": [
+      {
+        "title": "Software Eng. Intern",
+        "startDate": "Feb 2023",
+        "endDate": "Feb 2023",
+        "description": "- Frontend development using **ReactJS**\n- Focus was on finishing as much screens as possible(quantity)"
+      }
+    ]
+  },
+  {
+    "id": "mark-p",
+    "company": "mark-P",
+    "companyLink": "https://www.linkedin.com/company/mark-p",
+    "location": "Kerala, India",
+    "positions": [
+      {
+        "title": "Cofounder",
+        "startDate": "Aug 2021",
+        "endDate": "May 2023",
+        "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college\n- Failed, and I shut it down because of lack of a USP. Learnt a lot though - never regretted it"
+      }
+    ]
   }
 ]

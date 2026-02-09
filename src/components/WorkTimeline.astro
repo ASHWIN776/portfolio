@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import WorkTimelineEntry from './WorkTimelineEntry.astro';
+
+const works = await getCollection('works');
+---
+
+<div>
+  <div class="flex flex-col">
+    {works.map((work, index) => (
+      <WorkTimelineEntry
+        company={work.data.company}
+        companyLink={work.data.companyLink}
+        location={work.data.location}
+        positions={work.data.positions}
+        isLast={index === works.length - 1}
+      />
+    ))}
+  </div>
+</div>

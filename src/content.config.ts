@@ -37,13 +37,15 @@ const socials = defineCollection({
 const works = defineCollection({
   loader: file("src/data/works.json"),
   schema: z.object({
-    title: z.string(),
     company: z.string(),
     companyLink: z.string().url(),
     location: z.string(),
-    startDate: z.string(),
-    endDate: z.string().optional(),
-    description: z.string()
+    positions: z.array(z.object({
+      title: z.string(),
+      startDate: z.string(),
+      endDate: z.string().optional(),
+      description: z.string()
+    }))
   })
 })
 

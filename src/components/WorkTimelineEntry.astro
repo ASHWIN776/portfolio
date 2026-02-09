@@ -1,0 +1,75 @@
+---
+import { marked } from 'marked';
+import { Building2 } from '@lucide/astro';
+import Prose from './Prose.astro';
+
+interface Position {
+  title: string;
+  startDate: string;
+  endDate?: string;
+  description: string;
+}
+
+interface Props {
+  company: string;
+  companyLink: string;
+  location: string;
+  positions: Position[];
+  isLast?: boolean;
+}
+
+const { company, companyLink, location, positions, isLast = false } = Astro.props;
+
+const hasMultiplePositions = positions.length > 1;
+
+const oldestStart = positions[positions.length - 1].startDate;
+const newestEnd = positions[0].endDate;
+const dateRange = `${oldestStart} - ${newestEnd ?? 'Present'}`;
+---
+
+<div class="relative flex gap-x-4">
+  <div class="flex-shrink-0 z-10 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-divider bg-background">
+    <Building2 class="h-5 w-5 md:h-6 md:w-6 text-muted" />
+  </div>
+
+  <div class={`flex flex-col gap-y-1 flex-1 min-w-0 ${isLast ? '' : 'pb-5'}`}>
+    <a
+      href={companyLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-secondary transition-colors text-lg font-semibold font-mono"
+    >
+      {company}
+    </a>
+    <span class="text-xs text-muted">
+      {dateRange} &middot; {location}
+    </span>
+
+    <div class={`mt-4 flex flex-col`}>
+      {positions.map(async (position, index) => {
+        const html = await marked.parse(position.description);
+        const positionDate = `${position.startDate} - ${position.endDate ?? 'Present'}`;
+        const isLast = index === positions.length - 1;
+        return (
+          <div class={`relative ${hasMultiplePositions ? 'pl-6' : ''}`}>
+            {hasMultiplePositions && (
+              <>
+                {!isLast && <div class="absolute left-[4.5px] top-[10px] -bottom-2 w-[2px] bg-divider-soft" />}
+                <div class="absolute left-0 top-[5px] h-3 w-3 rounded-full border-2 border-divider-soft bg-background z-10" />
+              </>
+            )}
+            <div class="flex flex-col gap-y-1">
+              <span class="text-heading font-semibold">{position.title}</span>
+              <span class="text-xs text-muted">{positionDate}</span>
+              <div class="mt-1">
+                <Prose>
+                  <span class="text-sm" set:html={html} />
+                </Prose>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</div>
