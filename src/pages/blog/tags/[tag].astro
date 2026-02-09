@@ -1,0 +1,25 @@
+---
+import BlogListLayout from "../../../layouts/BlogListLayout.astro";
+import { getCollection } from "astro:content";
+import { tagToSlug, getAllTags } from "../../../utils/tags";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  const { tags, slugToName } = await getAllTags();
+
+  return tags.map((tag) => {
+    const filtered = posts
+      .filter((post) => post.data.tags.includes(tag))
+      .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+    return {
+      params: { tag: tagToSlug(tag) },
+      props: { posts: filtered, tagName: tag, allTags: tags },
+    };
+  });
+}
+
+const { posts, tagName, allTags } = Astro.props;
+---
+
+<BlogListLayout posts={posts} allTags={allTags} activeTag={tagName} />
