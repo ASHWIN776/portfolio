@@ -39,6 +39,7 @@ const works = defineCollection({
   schema: z.object({
     company: z.string(),
     companyLink: z.string().url(),
+    avatarPath: z.string(),
     location: z.string(),
     positions: z.array(z.object({
       title: z.string(),

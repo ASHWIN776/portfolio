@@ -1,36 +1,42 @@
 ---
 import { marked } from 'marked';
-import { Building2 } from '@lucide/astro';
 import Prose from './Prose.astro';
-
-interface Position {
-  title: string;
-  startDate: string;
-  endDate?: string;
-  description: string;
-}
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { calculateDuration } from '../utils/helpers';
 
 interface Props {
-  company: string;
-  companyLink: string;
-  location: string;
-  positions: Position[];
-  isLast?: boolean;
+  work: CollectionEntry<'works'>['data']
+  isLast?: Boolean
 }
 
-const { company, companyLink, location, positions, isLast = false } = Astro.props;
+const { 
+  work: { company, companyLink, location, positions, avatarPath}, 
+  isLast = false
+} = Astro.props;
 
 const hasMultiplePositions = positions.length > 1;
 
 const oldestStart = positions[positions.length - 1].startDate;
 const newestEnd = positions[0].endDate;
-const dateRange = `${oldestStart} - ${newestEnd ?? 'Present'}`;
+const duration = calculateDuration(oldestStart, newestEnd);
 ---
 
 <div class="relative flex gap-x-4">
-  <div class="flex-shrink-0 z-10 flex items-center justify-center h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-divider bg-background">
-    <Building2 class="h-5 w-5 md:h-6 md:w-6 text-muted" />
-  </div>
+  <a
+    href={companyLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="self-start"
+  >
+    <Image
+      src={avatarPath}
+      alt={`image of ${company}`}
+      class="border border-divider rounded-md"
+      width="40"
+      height="40"
+    />
+  </a>
 
   <div class={`flex flex-col gap-y-1 flex-1 min-w-0 ${isLast ? '' : 'pb-5'}`}>
     <a
@@ -42,7 +48,7 @@ const dateRange = `${oldestStart} - ${newestEnd ?? 'Present'}`;
       {company}
     </a>
     <span class="text-xs text-muted">
-      {dateRange} &middot; {location}
+      {duration} &middot; {location}
     </span>
 
     <div class={`mt-4 flex flex-col`}>
@@ -50,12 +56,13 @@ const dateRange = `${oldestStart} - ${newestEnd ?? 'Present'}`;
         const html = await marked.parse(position.description);
         const positionDate = `${position.startDate} - ${position.endDate ?? 'Present'}`;
         const isLast = index === positions.length - 1;
+        
         return (
           <div class={`relative ${hasMultiplePositions ? 'pl-6' : ''}`}>
             {hasMultiplePositions && (
               <>
-                {!isLast && <div class="absolute left-[4.5px] top-[10px] -bottom-2 w-[2px] bg-divider-soft" />}
-                <div class="absolute left-0 top-[5px] h-3 w-3 rounded-full border-2 border-divider-soft bg-background z-10" />
+                {!isLast && <div class="absolute left-[4.5px] top-[10px] -bottom-2 w-[2px] bg-divider" />}
+                <div class="absolute left-0 top-[5px] h-3 w-3 rounded-full border-2 border-divider bg-background z-10" />
               </>
             )}
             <div class="flex flex-col gap-y-1">

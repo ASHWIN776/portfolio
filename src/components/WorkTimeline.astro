@@ -9,10 +9,7 @@ const works = await getCollection('works');
   <div class="flex flex-col">
     {works.map((work, index) => (
       <WorkTimelineEntry
-        company={work.data.company}
-        companyLink={work.data.companyLink}
-        location={work.data.location}
-        positions={work.data.positions}
+        work={work.data}
         isLast={index === works.length - 1}
       />
     ))}
