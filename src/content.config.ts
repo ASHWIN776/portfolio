@@ -8,16 +8,11 @@ const blog = defineCollection({
     base: "./src/data/blog",
   }),
   schema: z.object({
-    // Common fields for all content types
     title: z.string(),
     date: z.date(),
     oneLiner: z.string(),
     tags: z.array(z.string()),
-    
-    // Field to distinguish between content types
     contentType: z.enum(['post', 'note']).default('post'),
-    
-    // Fields specific to notes (optional for regular blog posts)
     link: z.string().url().optional(),
     author: z.string().optional(),
     authorLink: z.string().url().optional(),
@@ -36,10 +31,10 @@ const socials = defineCollection({
 
 const works = defineCollection({
   loader: file("src/data/works.json"),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     company: z.string(),
     companyLink: z.string().url(),
-    avatarPath: z.string(),
+    avatar: image(),
     location: z.string(),
     positions: z.array(z.object({
       title: z.string(),
@@ -52,13 +47,13 @@ const works = defineCollection({
 
 const projects = defineCollection({
   loader: file("src/data/projects.json"),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     name: z.string(),
     date: z.string(),
     skills: z.array(z.string()),
     oneLiner: z.string(),
     description: z.string(),
-    imagePath: z.string(),
+    cover: image(),
     links: z.object({
       github: z.string().url().optional(),
       live: z.string().url().optional(),

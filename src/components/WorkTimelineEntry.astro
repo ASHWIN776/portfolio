@@ -1,7 +1,6 @@
 ---
 import { marked } from 'marked';
 import Prose from './Prose.astro';
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { calculateDuration } from '../utils/helpers';
 
@@ -10,8 +9,8 @@ interface Props {
   isLast?: Boolean
 }
 
-const { 
-  work: { company, companyLink, location, positions, avatarPath}, 
+const {
+  work: { company, companyLink, location, positions, avatar},
   isLast = false
 } = Astro.props;
 
@@ -29,8 +28,8 @@ const duration = calculateDuration(oldestStart, newestEnd);
     rel="noopener noreferrer"
     class="self-start"
   >
-    <Image
-      src={avatarPath}
+    <img
+      src={avatar.src}
       alt={`image of ${company}`}
       class="border border-divider rounded-md"
       width="40"
