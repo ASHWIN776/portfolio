@@ -7,9 +7,9 @@
     "location": "Kyoto, Japan",
     "positions": [
       {
-        "title": "Software Engineer",
+        "title": "Software Engineer (Web + Mobile)",
         "startDate": "Sep 2025",
-        "description": "- **Leading** development of the mobile app for [ArchiX](https://archix.ai/)\n- Also building full-stack web features\n- Shipping fast"
+        "description": "- Building the best **architectural rendering platform ([ArchiX](https://archix.ai/))** from Japan, aspiring to take over the world\n- **Development Lead** of the mobile app for [ArchiX](https://archix.ai/)\n- Shipping fast with **React Native Expo** and **ReactJS, NestJS**"
       }
     ]
   },
@@ -24,13 +24,13 @@
         "title": "Full Stack Software Engineer",
         "startDate": "Nov 2023",
         "endDate": "Aug 2025",
-        "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped projects using **ReactJS, Rails**\n- Tools used: **Git, Docker, AWS, Figma**"
+        "description": "- Learning and problem solving in a **fast-paced environment**\n- Shipped multiple projects using **ReactJS, Rails**"
       },
       {
         "title": "Software Eng. Intern",
         "startDate": "Jun 2023",
         "endDate": "Nov 2023",
-        "description": "- Frontend development using **ReactJS**\n- Focused on writing **clean and maintainable** code"
+        "description": "- Frontend development using **ReactJS**"
       }
     ]
   },
@@ -57,10 +57,10 @@
     "location": "Kerala, India",
     "positions": [
       {
-        "title": "Cofounder",
+        "title": "Co-founder",
         "startDate": "Aug 2021",
         "endDate": "July 2023",
-        "description": "- Startup that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college\n- Failed, and I **shut it down because of lack of a USP (Unique Selling Point)**. Nevertheless, it was an awesome experience"
+        "description": "- **Multi-modal attendance management system** that I started with my [friend](https://www.linkedin.com/in/aiymenlatheef/) in college\n- Failed, and I **shut it down because of lack of a USP (Unique Selling Point)**. Nevertheless, it was an awesome experience"
       }
     ]
   }
