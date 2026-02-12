@@ -5,7 +5,7 @@ author: 'Sam Altman'
 authorLink: 'https://x.com/sama'
 date: 2025-02-10
 oneLiner: 'Notes on things to keep in mind when it comes to startup ideas'
-tags: ["startup"]
+tags: ["startup", "mental model"]
 contentType: 'note'
 ---
 

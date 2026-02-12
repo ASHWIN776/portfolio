@@ -3,7 +3,7 @@ title: 'Why Containers?'
 date: 2025-03-07
 oneLiner: 'Journey from Bare Metal to Containers'
 description: 'This is the first post of my new Astro blog.'
-tags: ["cloud computing", "docker", "container"]
+tags: ["cloud computing", "basics", "container", "docker"]
 ---
 
 Here, I'll take you through a conceptual journey from running an app on a physical machine to running it in a container.
