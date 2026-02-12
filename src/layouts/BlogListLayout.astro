@@ -1,0 +1,38 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import BlogCard from "../components/BlogCard.astro";
+import TagSidebar from "../components/TagSidebar.astro";
+import MobileTagFilter from "../components/MobileTagFilter.astro";
+
+interface Props {
+  posts: Array<{ id: string; data: { title: string; date: Date; oneLiner: string; tags: string[] } }>;
+  allTags: string[];
+  activeTag: string | null;
+}
+
+const { posts, allTags, activeTag } = Astro.props;
+const pageTitle = activeTag ? `Tag: ${activeTag}` : "Blog";
+---
+
+<BaseLayout pageTitle="Blog" wideLayout={true}>
+  <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
+    <TagSidebar tags={allTags} activeTag={activeTag} />
+
+    <div class="flex flex-col gap-y-8 max-w-2xl mx-auto w-full">
+      <div class="flex flex-col gap-y-4">
+        <h2 class="text-2xl">{pageTitle}</h2>
+      </div>
+      <MobileTagFilter tags={allTags} activeTag={activeTag} />
+      <div class="flex flex-col gap-y-6">
+        {posts.map((blog) => (
+          <BlogCard blog={{
+            ...blog.data,
+            link: `/blog/${blog.id}`,
+          }} />
+        ))}
+      </div>
+    </div>
+
+    <div class="hidden lg:block"></div>
+  </div>
+</BaseLayout>

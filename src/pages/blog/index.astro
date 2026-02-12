@@ -1,24 +1,13 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import SectionLayout from "../../layouts/SectionLayout.astro";
-import BlogCard from "../../components/BlogCard.astro";
+import BlogListLayout from "../../layouts/BlogListLayout.astro";
 import { getCollection } from "astro:content";
+import { getAllTags } from "../../utils/tags";
 
-const pageTitle = "Blog";
 const allBlogs = (await getCollection("blog")).sort((a, b) => {
   return b.data.date.getTime() - a.data.date.getTime();
 });
+
+const { tags } = await getAllTags();
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <SectionLayout title={pageTitle}>
-    {
-      allBlogs.map((blog) => (
-        <BlogCard blog={{
-          ...blog.data,
-          link: `/blog/${blog.id}`,
-        }} />
-      ))
-    }
-  </SectionLayout>
-</BaseLayout>
+<BlogListLayout posts={allBlogs} allTags={tags} activeTag={null} />
