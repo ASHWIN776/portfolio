@@ -11,10 +11,10 @@ interface Props {
 }
 
 const { posts, allTags, activeTag } = Astro.props;
-const pageTitle = activeTag ? `Blog: ${activeTag}` : "Blog";
+const pageTitle = activeTag ? `Tag: ${activeTag}` : "Blog";
 ---
 
-<BaseLayout pageTitle={pageTitle} wideLayout={true}>
+<BaseLayout pageTitle="Blog" wideLayout={true}>
   <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
     <TagSidebar tags={allTags} activeTag={activeTag} />
 

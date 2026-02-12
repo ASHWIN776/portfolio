@@ -34,22 +34,6 @@ const { frontmatter, headings = [] } = Astro.props;
             <p class="text-faint text-xs">No headings found</p>
           )}
         </div>
-        {frontmatter.tags.length > 0 && (
-          <div>
-            <h2 class="text-sm font-bold mb-4 text-muted">Tags</h2>
-            <div class="flex flex-wrap gap-2">
-              <ul class="flex flex-col gap-y-2 text-sm">
-                {frontmatter.tags.map((tag: string) => (
-                  <li>
-                    <a href={`/blog/tags/${tagToSlug(tag)}`} class="text-subtle hover:text-secondary transition-colors duration-200">
-                      {tag}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        )}
       </nav>
     </aside>
 
@@ -58,18 +42,28 @@ const { frontmatter, headings = [] } = Astro.props;
         <a href="/blog" class="link text-sm">← Back</a>
 
         <h1 class="text-2xl">{frontmatter.title}</h1>
-        <p class="text-muted text-xs">{getFormattedDate(frontmatter.date)}</p>
-      </div>
-
-      {frontmatter.tags.length > 0 && (
-        <div class="lg:hidden flex flex-wrap gap-2">
-          {frontmatter.tags.map((tag: string) => (
-            <a href={`/blog/tags/${tagToSlug(tag)}`} class="text-tag-text bg-tag-bg px-3 py-1 text-xs rounded-md font-bold hover:opacity-80 transition-opacity duration-200">
-              {tag}
-            </a>
-          ))}
+        <div class="text-muted text-sm flex gap-x-1">
+          <span>
+            {getFormattedDate(frontmatter.date)}
+          </span>
+          <span>
+            &middot;
+          </span>
+         {
+          frontmatter.tags.length > 0 ? (
+            <div class="flex gap-x-2">[
+             {
+               frontmatter.tags.map((tag: string) => (
+                 <a href={`/blog/tags/${tagToSlug(tag)}`} class="link">
+                   #{tag}
+                 </a>
+               ))
+             }]
+            </div>
+          ) : null
+        }
         </div>
-      )}
+      </div>
 
       {frontmatter.contentType === 'note' ? (
         <div class="flex flex-col bg-success gap-y-2 p-3 rounded-md">

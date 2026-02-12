@@ -9,23 +9,28 @@ interface Props {
 const { tags, activeTag } = Astro.props;
 ---
 
-<div class="lg:hidden flex flex-wrap gap-2">
-  <a
-    href="/blog"
-    class={activeTag === null
-      ? "bg-tag-bg text-tag-text px-3 py-1 rounded-md font-bold text-xs"
-      : "border border-divider-soft text-subtle px-3 py-1 rounded-md text-xs transition-colors duration-200"}
-  >
-    All
-  </a>
-  {tags.map((tag) => (
+<details class="lg:hidden border border-divider-soft rounded-md">
+  <summary class="px-4 py-3 cursor-pointer text-sm font-medium">
+    Filter by Tag
+  </summary>
+  <div class="px-4 pb-3 flex flex-wrap gap-2">
     <a
-      href={`/blog/tags/${tagToSlug(tag)}`}
-      class={activeTag === tag
+      href="/blog"
+      class={activeTag === null
         ? "bg-tag-bg text-tag-text px-3 py-1 rounded-md font-bold text-xs"
         : "border border-divider-soft text-subtle px-3 py-1 rounded-md text-xs transition-colors duration-200"}
     >
-      {tag}
+      all blogs
     </a>
-  ))}
-</div>
+    {tags.map((tag) => (
+      <a
+        href={`/blog/tags/${tagToSlug(tag)}`}
+        class={activeTag === tag
+          ? "bg-tag-bg text-tag-text px-3 py-1 rounded-md font-bold text-xs"
+          : "border border-divider-soft text-subtle px-3 py-1 rounded-md text-xs transition-colors duration-200"}
+      >
+        {tag}
+      </a>
+    ))}
+  </div>
+</details>
