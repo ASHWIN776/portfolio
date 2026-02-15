@@ -104,4 +104,56 @@ const { frontmatter, headings = [] } = Astro.props;
     
     <div class="hidden lg:block"></div>
   </div>
+
+  <script>
+    function initTocHighlight() {
+      const tocLinks = document.querySelectorAll<HTMLAnchorElement>('#toc-list a[data-heading-id]');
+      if (!tocLinks.length) return;
+
+      const headingIds = Array.from(tocLinks).map(link => link.dataset.headingId!);
+      const headingElements = headingIds
+        .map(id => document.getElementById(id))
+        .filter((el): el is HTMLElement => el !== null);
+
+      if (!headingElements.length) return;
+
+      let activeId: string | null = null;
+      const visibleIds = new Set<string>();
+
+      function updateActive() {
+        const topmost = headingElements.find(el => visibleIds.has(el.id));
+        const id = topmost?.id ?? null;
+        if (!id || id === activeId) return;
+        activeId = id;
+        tocLinks.forEach(link => {
+          if (link.dataset.headingId === id) {
+            link.classList.remove('text-subtle');
+            link.classList.add('text-secondary', 'font-medium');
+          } else {
+            link.classList.remove('text-secondary', 'font-medium');
+            link.classList.add('text-subtle');
+          }
+        });
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              visibleIds.add(e.target.id);
+            } else {
+              visibleIds.delete(e.target.id);
+            }
+          });
+          updateActive();
+        },
+        { rootMargin: '0px 0px -50% 0px', threshold: 0 }
+      );
+
+      headingElements.forEach(el => observer.observe(el));
+    }
+
+    initTocHighlight();
+    document.addEventListener('astro:after-swap', initTocHighlight);
+  </script>
 </BaseLayout>
