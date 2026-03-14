@@ -4,6 +4,7 @@ import { tagToSlug } from "../utils/tags";
 import BaseLayout from "./BaseLayout.astro";
 import Prose from "../components/Prose.astro";
 import MobileToc from "../components/MobileToc.astro";
+import CopyEmail from "../components/CopyEmail.astro";
 
 const { frontmatter, headings = [] } = Astro.props;
 ---
@@ -49,16 +50,16 @@ const { frontmatter, headings = [] } = Astro.props;
           <span>
             &middot;
           </span>
-         {
-          frontmatter.tags.length > 0 ? (
-            <div class="flex gap-x-2">[
-             {
-               frontmatter.tags.map((tag: string) => (
-                 <a href={`/blog/tags/${tagToSlug(tag)}`} class="link">
-                   #{tag}
-                 </a>
-               ))
-             }]
+        {
+        frontmatter.tags.length > 0 ? (
+          <div class="flex gap-x-2">[
+            {
+              frontmatter.tags.map((tag: string) => (
+                <a href={`/blog/tags/${tagToSlug(tag)}`} class="link">
+                  #{tag}
+                </a>
+              ))
+            }]
             </div>
           ) : null
         }
@@ -97,7 +98,7 @@ const { frontmatter, headings = [] } = Astro.props;
 
       <div class="text-sm text-center">
         <span class="text-muted">
-          I'd love to hear your thoughts. Send an <a href="mailto:=anilashwin2001@gmail.com" class="link font-medium">email</a>
+          I'd love to hear your thoughts. Email me at <CopyEmail />
         </span>
       </div>
     </div>
@@ -156,4 +157,5 @@ const { frontmatter, headings = [] } = Astro.props;
     initTocHighlight();
     document.addEventListener('astro:after-swap', initTocHighlight);
   </script>
+
 </BaseLayout>

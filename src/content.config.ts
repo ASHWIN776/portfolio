@@ -19,16 +19,6 @@ const blog = defineCollection({
   })
 })
 
-const socials = defineCollection({
-  loader: file("src/data/socials.json"),
-  schema: z.object({
-    name: z.string(),
-    url: z.string().url(),
-    handle: z.string(),
-    iconPath: z.string()
-  })
-})
-
 const works = defineCollection({
   loader: file("src/data/works.json"),
   schema: ({ image }) => z.object({
@@ -78,7 +68,6 @@ const githubContributions = defineCollection({
 
 export const collections = {
   blog,
-  socials,
   works,
   projects,
   githubContributions
