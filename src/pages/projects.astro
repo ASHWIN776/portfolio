@@ -33,7 +33,7 @@ const projects = (await getCollection("projects")).reverse()
       </nav>
     </aside>
 
-    <div class="flex flex-col gap-y-8 max-w-2xl mx-auto w-full">
+    <div class="flex flex-col gap-y-8 max-w-[640px] mx-auto w-full">
       <SectionLayout title="Projects">
         {
           projects.map(project => (

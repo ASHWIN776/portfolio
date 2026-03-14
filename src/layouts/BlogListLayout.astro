@@ -18,7 +18,7 @@ const pageTitle = activeTag ? `Tag: ${activeTag}` : "Blog";
   <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr_250px] gap-8 grow">
     <TagSidebar tags={allTags} activeTag={activeTag} />
 
-    <div class="flex flex-col gap-y-8 max-w-2xl mx-auto w-full">
+    <div class="flex flex-col gap-y-8 max-w-[640px] mx-auto w-full">
       <div class="flex flex-col gap-y-4">
         <h2 class="text-2xl">{pageTitle}</h2>
       </div>
