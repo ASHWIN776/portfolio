@@ -30,13 +30,13 @@ const { pageTitle, wideLayout = false } = Astro.props
 	</head>
 	<body>
 		<div class="p-4 min-h-dvh flex flex-col gap-y-10 justify-between">
-			<div class="md:max-w-2xl md:mx-auto w-full">
+			<div class="md:max-w-[640px] md:mx-auto w-full">
 				<Header pageTitle={pageTitle}/>
 			</div>
-			<main class={`${wideLayout ? 'md:max-w-7xl' : 'md:max-w-2xl'} md:mx-auto w-full flex flex-col grow`}>
+			<main class={`${wideLayout ? 'md:max-w-7xl' : 'md:max-w-[640px]'} md:mx-auto w-full flex flex-col grow`}>
 				<slot />
 			</main>
-			<div class="md:max-w-2xl md:mx-auto w-full">
+			<div class="md:max-w-[640px] md:mx-auto w-full">
 				<Footer />
 			</div>
 		</div>
