@@ -1,0 +1,44 @@
+---
+import { Clipboard, ClipboardCheck } from '@lucide/astro';
+
+const email = 'contact@ashwin.im';
+---
+
+<span class="relative inline-flex items-center group/email copy-email-widget">
+  <button
+    class="copy-email-btn absolute left-0 opacity-0 -translate-x-1 group-hover/email:opacity-100 group-hover/email:translate-x-0 transition-all duration-200 cursor-pointer hover:text-secondary"
+    title="Copy email address"
+    aria-label="Copy email address"
+  >
+    <span class="copy-icon"><Clipboard class="size-[1em]" /></span>
+    <span class="check-icon hidden text-callout-success-text"><ClipboardCheck class="size-[1em]" /></span>
+  </button>
+  <a href={`mailto:${email}`} class="link font-medium transition-transform duration-200 group-hover/email:translate-x-[calc(1em+4px)]">{email}</a>
+</span>
+
+<script>
+  function initCopyEmail() {
+    document.querySelectorAll<HTMLElement>('.copy-email-widget').forEach(widget => {
+      const btn = widget.querySelector<HTMLButtonElement>('.copy-email-btn');
+      const copyIcon = widget.querySelector<HTMLElement>('.copy-icon');
+      const checkIcon = widget.querySelector<HTMLElement>('.check-icon');
+      if (!btn || !copyIcon || !checkIcon || btn.dataset.initialized) return;
+
+      btn.dataset.initialized = 'true';
+
+      btn.addEventListener('click', async () => {
+        const emailText = widget.querySelector('a')!.textContent!.trim();
+        await navigator.clipboard.writeText(emailText);
+        copyIcon.classList.add('hidden');
+        checkIcon.classList.remove('hidden');
+        setTimeout(() => {
+          checkIcon.classList.add('hidden');
+          copyIcon.classList.remove('hidden');
+        }, 2000);
+      });
+    });
+  }
+
+  initCopyEmail();
+  document.addEventListener('astro:after-swap', initCopyEmail);
+</script>
