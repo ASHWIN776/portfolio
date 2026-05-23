@@ -91,7 +91,7 @@
     "name": "an-notate",
     "date": "Feb 2026",
     "skills": ["React", "TypeScript", "HonoJS", "NeonDB", "Tailwind CSS"],
-    "oneLiner": "Capture bugs and feedback directly on your site and send it to your team to ship.",
+    "oneLiner": "Report fast, Ship faster - Capture bugs and feedback directly on your site and send it to your team to ship.",
     "description": "- **Motivation** - Wanted a tool to make it easy for non-tech people in the team to open issues on a product website without leaving the page\n- Built a **browser extension** that allows users to **capture bugs and feedback directly on their website**\n- The captured issues are converted to tickets with **page screenshots, browser information, and user context** and synced into the project management tool that you choose (Notion supported, more to come)",
     "cover": "/src/assets/projects/an-notate.png",
     "links": {
