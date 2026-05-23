@@ -45,7 +45,7 @@
     "cover": "/src/assets/projects/portfolio.png",
     "links": {
       "github": "https://github.com/ashwin776/portfolio",
-      "live": "https://ashwin-anil.pages.dev"
+      "live": "https://ashwin.im"
     }
   },
   {
@@ -54,7 +54,7 @@
     "date": "Dec 2024",
     "skills": ["NextJS", "TypeScript", "Vercel AI SDK", "Supabase", "pgvector", "Tailwind CSS"],
     "oneLiner": "Save what catches your eye, recall it anytime",
-    "description": "- **Motivation** - Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Blogs, and Notes\n- All Iterations:\n\t- [Latest](https://youtu.be/aJ1d9uX3g_Y) - Separate page for adding content with Markdown Support, and Better UI\n\t- [First](https://youtu.be/IM7XrKOlbWQ)",
+    "description": "- **Motivation** - Wanted a tool that could save resources on the internet that I find interesting, and search or query it anytime\n- Implemented **RAG (Retrieval Augmented Generation)** from scratch\n- Users can add Websites, and Notes\n- All Iterations:\n\t- [Latest](https://youtu.be/aJ1d9uX3g_Y) - Separate page for adding content with Markdown Support, and Better UI\n\t- [First](https://youtu.be/IM7XrKOlbWQ)",
     "cover": "/src/assets/projects/recall.png",
     "links": {
       "youtube": "https://youtu.be/aJ1d9uX3g_Y"
@@ -71,6 +71,31 @@
     "links": {
       "github": "https://github.com/ashwin776/helm",
       "youtube": "https://youtu.be/4HmYupihado"
+    }
+  },
+  {
+    "id": 7,
+    "name": "zousho",
+    "date": "Nov 2025",
+    "skills": ["NextJS", "TypeScript", "Supabase", "pgvector", "Tailwind CSS"],
+    "oneLiner": "Curate and share your taste of the internet",
+    "description": "- **Motivation** - Wanted a tool to create and share a blog directory where I can store high signal blog posts that I find interesting on the internet.\n- Built a **web app** that allows users to **save and share blog posts** with others.",
+    "cover": "/src/assets/projects/zousho.png",
+    "links": {
+      "live": "https://zousho.xyz",
+      "github": "https://github.com/ASHWIN776/zousho"
+    }
+  },
+  {
+    "id": 8,
+    "name": "an-notate",
+    "date": "Feb 2026",
+    "skills": ["React", "TypeScript", "HonoJS", "NeonDB", "Tailwind CSS"],
+    "oneLiner": "Capture bugs and feedback directly on your site and send it to your team to ship.",
+    "description": "- **Motivation** - Wanted a tool to make it easy for non-tech people in the team to open issues on a product website without leaving the page\n- Built a **browser extension** that allows users to **capture bugs and feedback directly on their website**\n- The captured issues are converted to tickets with **page screenshots, browser information, and user context** and synced into the project management tool that you choose (Notion supported, more to come)",
+    "cover": "/src/assets/projects/an-notate.png",
+    "links": {
+      "live": "https://an-notate.com/"
     }
   }
 ]
