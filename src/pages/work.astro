@@ -1,13 +1,7 @@
 ---
-import SectionLayout from "../layouts/SectionLayout.astro"
-import WorkTimeline from "../components/WorkTimeline.astro"
 import BaseLayout from "../layouts/BaseLayout.astro"
-
-const pageTitle = 'Work'
+import Work from "../components/Work.astro"
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <SectionLayout title={pageTitle}>
-    <p>Here's a timeline of my professional work history.</p>
-    <WorkTimeline />
-  </SectionLayout>
+<BaseLayout pageTitle="Work">
+  <Work />
 </BaseLayout>
