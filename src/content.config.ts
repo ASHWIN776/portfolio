@@ -19,6 +19,20 @@ const blog = defineCollection({
   })
 })
 
+const reading = defineCollection({
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/data/reading",
+  }),
+  schema: z.object({
+    title: z.string(),
+    url: z.string().url(),
+    date: z.date(),
+    type: z.enum(['article', 'book', 'paper', 'video']).default('article'),
+    tags: z.array(z.string()).default([]),
+  })
+})
+
 const works = defineCollection({
   loader: file("src/data/works.json"),
   schema: ({ image }) => z.object({
@@ -68,6 +82,7 @@ const githubContributions = defineCollection({
 
 export const collections = {
   blog,
+  reading,
   works,
   projects,
   githubContributions

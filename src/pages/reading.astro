@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import ReadingList from "../components/ReadingList.astro";
+---
+
+<BaseLayout pageTitle="Reading">
+    <SectionLayout title="Reading">
+        <p class="text-sm text-subtle">
+            Things I've read, and what I think about them.
+        </p>
+        <ReadingList />
+    </SectionLayout>
+</BaseLayout>

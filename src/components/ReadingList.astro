@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import ReadingEntry from "./ReadingEntry.astro";
+
+const entries = (await getCollection("reading")).sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<div class="flex flex-col divide-y divide-hr *:py-6 *:first:pt-0 *:last:pb-0">
+    {entries.map((entry) => (
+        <ReadingEntry entry={entry} />
+    ))}
+</div>

@@ -1,0 +1,44 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
+
+interface Props {
+    entry: CollectionEntry<"reading">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const domain = new URL(entry.data.url).hostname.replace(/^www\./, "");
+const shortDate = entry.data.date.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    timeZone: "UTC",
+});
+---
+
+<article id={entry.id} class="flex flex-col gap-y-2 scroll-mt-8">
+    <div class="flex justify-between items-baseline gap-x-4">
+        <h3 class="text-lg">
+            <a
+                href={entry.data.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="link"
+            >
+                {entry.data.title}
+            </a>
+        </h3>
+        <span class="text-muted text-xs font-mono shrink-0">{shortDate}</span>
+    </div>
+    <p class="text-muted text-xs font-mono -mt-1">
+        {domain} · {entry.data.type}
+    </p>
+    <div class="prose prose-sm max-w-none prose-p:my-1 prose-blockquote:my-2 prose-a:text-secondary prose-a:no-underline">
+        <Content />
+    </div>
+    {entry.data.tags.length > 0 && (
+        <p class="text-muted text-xs font-mono">
+            {entry.data.tags.map((t) => `#${t}`).join(" ")}
+        </p>
+    )}
+</article>
